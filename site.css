@@ -261,7 +261,10 @@ h1 {
   background: var(--accent, var(--brand));
 }
 .panel code {
-  font-size: .92em; background: var(--bg-inset);
+  /* 2026-10-08：原 .92em。父级 14px 时算出 12.88px —— 半像素字号，
+   * _design-audit 的「字号档位」检查会判失败（字号只用 3 档 token）。
+   * 改用 --fs-xs（12px），落在既有档位上。 */
+  font-size: var(--fs-xs); background: var(--bg-inset);
   padding: 1px 5px; border-radius:var(--r-xs); color: var(--ink);
 }
 
@@ -449,7 +452,7 @@ th.w-28 { width: 112px; } th.w-52 { width: 208px; }
 }
 .axis dd code {
   background: var(--bg-inset); padding: 1px 5px;
-  border-radius:var(--r-xs); font-size: .92em;
+  border-radius:var(--r-xs); font-size: var(--fs-xs); /* 原 .92em → 12.88px，同 .panel code */
 }
 dl.axes { margin: 0; }
 
@@ -530,6 +533,27 @@ dl.axes { margin: 0; }
   background: var(--bg-raise, rgba(127,127,127,.08)); color: inherit;
 }
 #q:focus-visible { outline: 2px solid var(--cyan, #22d3c5); outline-offset: 2px; }
+/* B2（2026-10-09）：标签筛选下拉。
+ * ⚠ 必须显式给字号 —— 不为 select 写样式时，浏览器用表单控件默认字号
+ *   （实测 Chrome 是 13.3333px），_design-audit 会判「非整数字号」。
+ *   字号 13px 与 .chip 一致，实际是「整数 px」而不是「碰巧看起来对」。 */
+.tagsel {
+  margin-top: .9rem; padding: .35rem .75rem; font: inherit; font-size: 13px;
+  border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius:var(--r-sm);
+  background: var(--bg-raise, rgba(127,127,127,.08)); color: inherit; cursor: pointer;
+  max-width: 100%;
+}
+.tagsel:focus-visible { outline: 2px solid var(--cyan, #22d3c5); outline-offset: 2px; }
+/* B4：按「我想做什么」的入口。字号整数 px（设计系统规则）。 */
+.intent { margin: var(--sp-4) 0 0; }
+.intent-h { font-size: 13px; color: var(--ink-mid); margin: 0 0 .6rem; }
+.intent-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(190px, 100%), 1fr)); gap: .5rem; }
+.intent-card { display: flex; align-items: baseline; justify-content: space-between; gap: .5rem;
+  padding: .55rem .8rem; border: 1px solid var(--border, rgba(127,127,127,.35)); border-radius: var(--r-sm);
+  text-decoration: none; color: inherit; font-size: 13px; }
+.intent-card:hover { border-color: var(--cyan, #22d3c5); }
+.intent-card b { font-weight: 500; }
+.intent-n { font-size: 11px; color: var(--ink-faint, #888); white-space: nowrap; }
 
 .chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .9rem; }
 .chip {
@@ -541,6 +565,10 @@ dl.axes { margin: 0; }
 .chip em { font-style: normal; opacity: .6; font-size: 11px; }
 .chip:hover { border-color: var(--cyan, #22d3c5); color: inherit; }
 .chip.is-on { background: var(--cyan, #22d3c5); border-color: var(--cyan, #22d3c5); color: #04121a; }
+/* B6（2026-10-09）：亮色主题下 --cyan 被压深（#0b7c72），深字在上面只有 3.74:1 → 改白字。
+   与 brand.css 的 .t-skip 同一处理：亮底用深字、暗底用白字，必须分主题。 */
+[data-theme="light"] .chip.is-on { color: #fff; }
+[data-theme="light"] .chip.is-on em { opacity: .85; }
 .chip.is-on em { opacity: .75; }
 
 /* 分类分组 —— 2026-10-03：按分类上色 + 留白收进统一档。
@@ -637,7 +665,9 @@ dl.axes { margin: 0; }
 }
 html[data-lang="zh"] .c-tg i span[data-en] { margin-left: .35em; }
 .c-warn { font-size: 11px; color: var(--red, #e24b4a); }
-.card.is-dead { opacity: .55; }
+/* 失效条目渲染为 div（不可点，见 card() 注释）：光标与 hover 也要跟着「去链接化」 */
+.card.is-dead { opacity: .55; cursor: default; }
+.card.is-dead:hover { transform: none; border-color: var(--border, rgba(127,127,127,.28)); }
 .card.is-maybe { opacity: .8; }
 .empty { padding: 2rem 0; color: var(--ink-mid); }
 
