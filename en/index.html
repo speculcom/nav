@@ -1,0 +1,3399 @@
+<!DOCTYPE html>
+<html data-lang="en" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>AI Directory</title>
+<meta content="600+ off-site entries, grouped by use; the name opens the official site." name="description"/>
+<link href="https://nav.specul.com/en/" rel="canonical"/>
+<meta content="website" property="og:type"/>
+<meta content="AI Directory" property="og:site_name"/>
+<meta content="https://nav.specul.com/en/" property="og:url"/>
+<meta content="AI Directory" property="og:title"/>
+<meta content="600+ off-site entries, grouped by use; the name opens the official site." property="og:description"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="zh_CN" property="og:locale:alternate"/>
+<meta content="#16121f" name="theme-color"/>
+<link href="/assets/brand/dandelion-favicon-site.png" rel="icon" type="image/png"/>
+<link href="/assets/brand/dandelion-apple-touch-site.png" rel="apple-touch-icon"/>
+<script src="/brand.js"></script>
+<link href="/brand.css" rel="stylesheet"/>
+<link href="/site.css" rel="stylesheet"/>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"AI Directory","url":"https://nav.specul.com/en/","description":"600+ off-site entries, grouped by use; the name opens the official site.","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"AI Directory","url":"https://nav.specul.com/en/"},"mainEntity":{"@type":"ItemList","numberOfItems":633,"itemListElement":[{"@type":"ListItem","position":1,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":2,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":3,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":4,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":5,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":6,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":7,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":8,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":9,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":10,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":11,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":12,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":13,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":14,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":15,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":16,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":17,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":18,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":19,"name":"AI Directory","url":"https://nav.specul.com/en/"},{"@type":"ListItem","position":20,"name":"AI Directory","url":"https://nav.specul.com/en/"}]}}</script>
+<meta content="AI Directory" name="twitter:title"/><meta content="600+ off-site entries, grouped by use; the name opens the official site." name="twitter:description"/><link href="https://nav.specul.com/" hreflang="zh-CN" rel="alternate"/><link href="https://nav.specul.com/en/" hreflang="en" rel="alternate"/><link href="https://nav.specul.com/" hreflang="x-default" rel="alternate"/></head>
+<!-- B6（2026-10-09）：--accent 原先在这里被**内联到 body 上**（style="--accent:X"），
+     同时头部又写了 :root{--accent:X} —— 两处同一份值，冗余。
+     而内联样式会**赢过任何选择器**，于是主题级覆盖（html[data-theme="light"]{--accent:…}）
+     完全无效：vg 的引擎名在亮色主题下一直是 1.62:1 的金色，就是因为这条内联。
+     现在只保留头部那一处 —— 单一真相源，且可被主题覆盖。
+     ⚠ 这段注释里**不能出现反引号**：它在模板字符串内部，反引号会提前结束模板
+     （写这段时踩了第 4 次；pitfalls 里早有记录）。 -->
+<body class="brand-ambient has-tabbar has-tabbar-1row">
+<a class="t-skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="container site-bar">
+<a class="brand" href="https://specul.com/en/" title="投机取巧">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="brand-text">
+<span class="brand-name" id="markName">Speculative Speculation</span>
+<span class="brand-sub" id="markSub"></span>
+</span>
+</a>
+<nav aria-label="站点导航" class="nav-links">
+<a href="https://specul.com/en/">Home</a>
+<a href="https://learn.specul.com/en/">Learn</a>
+<a href="https://tools.specul.com/en/">Tools</a>
+<a href="https://models.specul.com/en/">Models</a>
+<a href="https://demos.specul.com/en/">Playground</a>
+<a href="https://oss.specul.com/en/">OSS</a>
+<a href="https://hardware.specul.com/en/">Compute</a>
+<a href="https://papers.specul.com/en/">AI Papers</a>
+<a href="https://chain.specul.com/en/">Chain</a>
+<a aria-current="page" href="https://nav.specul.com/en/">AI Directory</a>
+</nav>
+<!-- 2026-10-10：.nav-tools 从 nav 元素**内部**移到外面，与 .nav-links 平级。
+           放里面时窄屏下它会跟着链接一起换行：链接占满整行 → 按钮被挤到第三条
+           （实测顶栏 134px、按钮组孤零零一行）。移出来后它与品牌同行，
+           链接独占第二行居中 —— 这才是下面注释里方案 B 想要的样子。 -->
+<span class="nav-tools">
+<a aria-label="Search" class="icon-btn" href="https://specul.com/en/search.html" title="Search all sites"><span aria-hidden="true">⌕</span></a>
+<button aria-label="切换明暗主题" class="icon-btn" id="themeBtn" title="切换明暗主题" type="button">☾</button>
+<a aria-label="切换到中文" class="icon-btn" href="/" hreflang="zh-CN" id="langBtn" lang="zh-CN" title="切换到中文">中文</a>
+</span>
+<!-- B6（2026-10-09）：窄屏（≤900px）下 .nav-links 会隐藏，这个汉堡是替代入口。
+           行为在共享 brand.js 里（一处实现、十站共用），样式在共享 brand.css。
+           无脚本时 CSS 不会显示它，而是把 .nav-links 在窄屏放出来 —— 不会出现
+           「导航被藏进一个点了没反应的按钮」。 -->
+<button aria-controls="navDrawer" aria-expanded="false" aria-label="打开菜单" class="nav-burger" type="button">
+<i></i><i></i><i></i>
+</button>
+</div>
+</header>
+<div class="nav-scrim"></div>
+<aside aria-hidden="true" aria-label="站点导航" class="nav-drawer" id="navDrawer">
+<div class="nav-drawer-h">
+<span class="brand-name">Speculative Speculation</span>
+<span class="brand-sub"></span>
+<button aria-label="关闭" class="nav-dclose" type="button">×</button>
+</div>
+<nav class="nav-drawer-list">
+<a href="https://specul.com/en/"><span>Home</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://learn.specul.com/en/"><span>Learn</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://tools.specul.com/en/"><span>Tools</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://models.specul.com/en/"><span>Models</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://demos.specul.com/en/"><span>Playground</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://oss.specul.com/en/"><span>OSS</span><span aria-hidden="true" class="ar">→</span></a>
+<a class="nav-group-start" href="https://hardware.specul.com/en/"><span>Compute</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://papers.specul.com/en/"><span>AI Papers</span><span aria-hidden="true" class="ar">→</span></a>
+<a href="https://chain.specul.com/en/"><span>Chain</span><span aria-hidden="true" class="ar">→</span></a>
+<a aria-current="page" class="nav-group-start" data-nav-group="external" href="https://nav.specul.com/en/"><span>AI Directory</span><span aria-hidden="true" class="ar">↗</span></a>
+</nav>
+<div class="nav-drawer-foot">
+<p>Content sites cover learn, use, choose and run; AI Directory is a catalogue of off-site AI sites.</p>
+<nav><a href="https://specul.com/en/legal.html">Legal terms</a></nav>
+</div>
+</aside>
+<main id="main">
+<header class="site-hero">
+<div class="container site-hero-row">
+<div>
+<h1>AI Directory</h1>
+<p class="site-hero-deck">600+ off-site entries, grouped by use; the name opens the official site.</p>
+</div>
+<div class="dir-tools">
+<label class="dir-search" for="q">
+<span class="sr-only">Search</span>
+<input autocomplete="off" id="q" placeholder="Search a site" type="search"/>
+</label>
+<button class="reset-btn" id="directory-reset" type="button">Clear</button>
+</div>
+</div>
+</header>
+<p class="dir-count dir-links container"><a href="/en/fit.html">How to use 100 common entries</a> · <a href="/en/2026.html">2026 additions</a></p>
+<section class="section dir-body" id="dir">
+<div class="container">
+<nav aria-label="Filter by category" class="dir-cats"><button class="chip is-on" data-cat="all">All</button>
+<button class="chip" data-cat="llm">LLMs &amp; chat</button>
+<button class="chip" data-cat="coding">AI coding &amp; agents</button>
+<button class="chip" data-cat="gen">Multimodal generation</button>
+<button class="chip" data-cat="app">Applications</button>
+<button class="chip" data-cat="model">Model providers</button>
+<button class="chip" data-cat="dev">Developer tools</button>
+<button class="chip" data-cat="infra">Infrastructure</button>
+<button class="chip" data-cat="robot">Robotics &amp; embodied</button>
+<button class="chip" data-cat="learn">Learning</button>
+<button class="chip" data-cat="community">Community</button>
+<button class="chip" data-cat="tools">Tools &amp; utilities</button>
+<button class="chip" data-cat="safety">AI safety &amp; governance</button></nav>
+<p class="empty" hidden="" id="empty">No matching entries.</p>
+<p aria-live="polite" class="dir-count" id="filtered-count" role="status"></p>
+<section class="cat-group" data-cat="llm" id="cat-llm">
+<h2 class="cat-h"><span aria-hidden="true" class="cat-dot"></span>LLMs &amp; chat</h2>
+<div class="grid">
+<div class="card-wrap" data-cat="llm" data-tags="多模态">
+<a class="c-link" href="https://chatgpt.com" id="i-chatgpt" rel="noopener" target="_blank">
+<span class="c-nm">ChatGPT</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="办公·Agent">
+<a class="c-link" href="https://chatgpt.com/work" id="i-chatgpt-work" rel="noopener" target="_blank">
+<span class="c-nm">ChatGPT Work</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="长文本·安全">
+<a class="c-link" href="https://claude.ai" id="i-claude" rel="noopener" target="_blank">
+<span class="c-nm">Claude</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="推理·Agent">
+<a class="c-link" href="https://www.anthropic.com/claude/fable" id="i-claude-fable-52" rel="noopener" target="_blank">
+<span class="c-nm">Claude Fable 5.2</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂·多模态">
+<a class="c-link" href="https://gemini.google.com" id="i-gemini" rel="noopener" target="_blank">
+<span class="c-nm">Gemini</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="开源·编程助手">
+<a class="c-link" href="https://chat.deepseek.com" id="i-deepseek" rel="noopener" target="_blank">
+<span class="c-nm">DeepSeek</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="长文本·国产">
+<a class="c-link" href="https://www.kimi.com" id="i-kimi" rel="noopener" target="_blank">
+<span class="c-nm">Kimi</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂·国产">
+<a class="c-link" href="https://tongyi.aliyun.com" id="i-通义千问" rel="noopener" target="_blank">
+<span class="c-nm">Qwen</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂·RAG">
+<a class="c-link" href="https://yiyan.baidu.com/" id="i-文心一言" rel="noopener" target="_blank">
+<span class="c-nm">ERNIE Bot</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂·多模态">
+<a class="c-link" href="https://www.doubao.com" id="i-豆包" rel="noopener" target="_blank">
+<span class="c-nm">Doubao</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂·实时">
+<a class="c-link" href="https://grok.com" id="i-grok" rel="noopener" target="_blank">
+<span class="c-nm">Grok</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="搜索·学术">
+<a class="c-link" href="https://www.perplexity.ai" id="i-perplexity" rel="noopener" target="_blank">
+<span class="c-nm">Perplexity</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="国产">
+<a class="c-link" href="https://chatglm.cn" id="i-智谱清言" rel="noopener" target="_blank">
+<span class="c-nm">ChatGLM</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="语音合成">
+<a class="c-link" href="https://xinghuo.xfyun.cn" id="i-讯飞星火" rel="noopener" target="_blank">
+<span class="c-nm">iFLYTEK Spark</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="国产">
+<a class="c-link" href="https://www.baichuan-ai.com" id="i-百川智能" rel="noopener" target="_blank">
+<span class="c-nm">Baichuan AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂">
+<a class="c-link" href="https://hunyuan.tencent.com" id="i-腾讯混元" rel="noopener" target="_blank">
+<span class="c-nm">Tencent Hunyuan</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂">
+<a class="c-link" href="https://yuanbao.tencent.com" id="i-腾讯元宝" rel="noopener" target="_blank">
+<span class="c-nm">Tencent Yuanbao</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="语音合成">
+<a class="c-link" href="https://hailuoai.com" id="i-海螺-ai" rel="noopener" target="_blank">
+<span class="c-nm">MiniMax</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="科研">
+<a class="c-link" href="https://www.stepfun.com" id="i-阶跃星辰" rel="noopener" target="_blank">
+<span class="c-nm">StepFun</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="企业级·RAG">
+<a class="c-link" href="https://cohere.com" id="i-cohere" rel="noopener" target="_blank">
+<span class="c-nm">Cohere</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂">
+<a class="c-link" href="https://chat.mistral.ai" id="i-mistral-le-chat" rel="noopener" target="_blank">
+<span class="c-nm">Mistral Le Chat</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="数字人">
+<a class="c-link" href="https://character.ai" id="i-characterai" rel="noopener" target="_blank">
+<span class="c-nm">Character.ai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="搜索·社区">
+<a class="c-link" href="https://poe.com" id="i-poe" rel="noopener" target="_blank">
+<span class="c-nm">Poe</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="开源">
+<a class="c-link" href="https://huggingface.co/chat" id="i-huggingchat" rel="noopener" target="_blank">
+<span class="c-nm">HuggingChat</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="API">
+<a class="c-link" href="https://console.anthropic.com" id="i-anthropic-console" rel="noopener" target="_blank">
+<span class="c-nm">Anthropic Console</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂·免费">
+<a class="c-link" href="https://www.meta.ai" id="i-meta-ai" rel="noopener" target="_blank">
+<span class="c-nm">Meta AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="Agent·办公">
+<a class="c-link" href="https://muse.ai/" id="i-meta-muse" rel="noopener" target="_blank">
+<span class="c-nm">Meta Muse</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂">
+<a class="c-link" href="https://pi.ai" id="i-pi" rel="noopener" target="_blank">
+<span class="c-nm">Pi</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="API·模型微调">
+<a class="c-link" href="https://platform.deepseek.com" id="i-deepseek-平台" rel="noopener" target="_blank">
+<span class="c-nm">DeepSeek</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂">
+<a class="c-link" href="https://aistudio.google.com" id="i-google-ai-studio" rel="noopener" target="_blank">
+<span class="c-nm">Google AI Studio</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="多模态·大厂">
+<a class="c-link" href="https://www.reka.ai" id="i-reka-ai" rel="noopener" target="_blank">
+<span class="c-nm">Reka AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="企业级">
+<a class="c-link" href="https://www.ai21.com" id="i-ai21-labs" rel="noopener" target="_blank">
+<span class="c-nm">AI21 Labs</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="企业级">
+<a class="c-link" href="https://writer.com" id="i-writer" rel="noopener" target="_blank">
+<span class="c-nm">Writer</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="搜索·学术">
+<a class="c-link" href="https://metaso.cn" id="i-秘塔-ai-搜索" rel="noopener" target="_blank">
+<span class="c-nm">Metaso</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="编程助手·搜索">
+<a class="c-link" href="https://devv.ai" id="i-devv" rel="noopener" target="_blank">
+<span class="c-nm">Devv</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="安全·搜索">
+<a class="c-link" href="https://you.com" id="i-youcom" rel="noopener" target="_blank">
+<span class="c-nm">You.com</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="编程助手·搜索">
+<a class="c-link" href="https://www.phind.com" id="i-phind" rel="noopener" target="_blank">
+<span class="c-nm">Phind</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂·搜索">
+<a class="c-link" href="https://bocha.cn" id="i-博查-ai-搜索" rel="noopener" target="_blank">
+<span class="c-nm">Bucha</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="安全">
+<a class="c-link" href="https://search.brave.com" id="i-brave-search" rel="noopener" target="_blank">
+<span class="c-nm">Brave Search</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="学术">
+<a class="c-link" href="https://consensus.app" id="i-consensus" rel="noopener" target="_blank">
+<span class="c-nm">Consensus</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="搜索">
+<a class="c-link" href="https://andisearch.com" id="i-andi-search" rel="noopener" target="_blank">
+<span class="c-nm">Andi Search</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="链上数据·交易">
+<a class="c-link" href="https://promptbase.com" id="i-promptbase" rel="noopener" target="_blank">
+<span class="c-nm">PromptBase</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="搜索·图像生成">
+<a class="c-link" href="https://prompthero.com" id="i-prompthero" rel="noopener" target="_blank">
+<span class="c-nm">PromptHero</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="图像生成">
+<a class="c-link" href="https://www.artbreeder.com" id="i-artbreeder" rel="noopener" target="_blank">
+<span class="c-nm">Artbreeder</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="社区">
+<a class="c-link" href="https://promptfolder.com" id="i-promptfolder" rel="noopener" target="_blank">
+<span class="c-nm">PromptFolder</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="设计">
+<a class="c-link" href="https://www.aiprm.com" id="i-chatgpt-prompt-plus" rel="noopener" target="_blank">
+<span class="c-nm">ChatGPT Prompt Plus</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="开源·本地部署">
+<a class="c-link" href="https://docs.sillytavern.app" id="i-sillytavern" rel="noopener" target="_blank">
+<span class="c-nm">SillyTavern</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂·多模态">
+<a class="c-link" href="https://copilot.microsoft.com" id="i-microsoft-copilot" rel="noopener" target="_blank">
+<span class="c-nm">Microsoft Copilot</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="搜索·学术">
+<a class="c-link" href="https://notebooklm.google.com" id="i-notebooklm" rel="noopener" target="_blank">
+<span class="c-nm">NotebookLM</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="搜索·学术">
+<a class="c-link" href="https://kagi.com" id="i-kagi" rel="noopener" target="_blank">
+<span class="c-nm">Kagi</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="开源 · 本地部署">
+<a class="c-link" href="https://openwebui.com" id="i-open-webui" rel="noopener" target="_blank">
+<span class="c-nm">Open WebUI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="开源 · 本地部署">
+<a class="c-link" href="https://www.librechat.ai" id="i-librechat" rel="noopener" target="_blank">
+<span class="c-nm">LibreChat</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="国产·大厂">
+<a class="c-link" href="https://www.lingyiwanwu.com/" id="i-零一万物" rel="noopener" target="_blank">
+<span class="c-nm">01.AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="大厂·多模态">
+<a class="c-link" href="https://www.sensetime.com/" id="i-商汤日日新" rel="noopener" target="_blank">
+<span class="c-nm">SenseTime SenseNova</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="搜索·学术">
+<a class="c-link" href="https://www.tiangong.cn/" id="i-天工-ai" rel="noopener" target="_blank">
+<span class="c-nm">Tiangong AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="搜索">
+<a class="c-link" href="https://www.n.cn/" id="i-纳米-ai-搜索" rel="noopener" target="_blank">
+<span class="c-nm">Nami AI Search</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="搜索·国产">
+<a class="c-link" href="https://quark.cn/" id="i-夸克-ai" rel="noopener" target="_blank">
+<span class="c-nm">Quark AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="llm" data-tags="开源·大厂">
+<a class="c-link" href="https://mistral.ai/" id="i-mistral-ai" rel="noopener" target="_blank">
+<span class="c-nm">Mistral AI</span>
+</a>
+</div>
+</div>
+</section>
+<section class="cat-group" data-cat="coding" id="cat-coding">
+<h2 class="cat-h"><span aria-hidden="true" class="cat-dot"></span>AI coding &amp; agents</h2>
+<div class="grid">
+<div class="card-wrap" data-cat="coding" data-tags="编程助手·IDE">
+<a class="c-link" href="https://github.com/features/copilot" id="i-github-copilot" rel="noopener" target="_blank">
+<span class="c-nm">GitHub Copilot</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="IDE">
+<a class="c-link" href="https://cursor.com" id="i-cursor" rel="noopener" target="_blank">
+<span class="c-nm">Cursor</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="Agent·编程助手">
+<a class="c-link" href="https://devin.ai/" id="i-devin" rel="noopener" target="_blank">
+<span class="c-nm">Devin</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="编程助手·企业级">
+<a class="c-link" href="https://www.augmentcode.com/" id="i-augment-code" rel="noopener" target="_blank">
+<span class="c-nm">Augment Code</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="命令行·开源">
+<a class="c-link" href="https://aider.chat/" id="i-aider" rel="noopener" target="_blank">
+<span class="c-nm">Aider</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="IDE·编程助手">
+<a class="c-link" href="https://devin.ai/desktop" id="i-windsurf" rel="noopener" target="_blank">
+<span class="c-nm">Windsurf</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="UI生成">
+<a class="c-link" href="https://v0.app" id="i-v0" rel="noopener" target="_blank">
+<span class="c-nm">v0</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="编程助手·前端">
+<a class="c-link" href="https://bolt.new" id="i-boltnew" rel="noopener" target="_blank">
+<span class="c-nm">Bolt.new</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="大厂·免费">
+<a class="c-link" href="https://qoder.com.cn" id="i-qoder-cn" rel="noopener" target="_blank">
+<span class="c-nm">Qoder CN</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="大厂·免费">
+<a class="c-link" href="https://qoder.com" id="i-qoder" rel="noopener" target="_blank">
+<span class="c-nm">Qoder</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="企业级·编程助手">
+<a class="c-link" href="https://www.qodo.ai" id="i-qodo" rel="noopener" target="_blank">
+<span class="c-nm">Qodo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="开源·免费">
+<a class="c-link" href="https://kilo.ai" id="i-kilo-code" rel="noopener" target="_blank">
+<span class="c-nm">Kilo Code</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="国产·大厂">
+<a class="c-link" href="https://kuaima.baidu.com" id="i-文心快码" rel="noopener" target="_blank">
+<span class="c-nm">Wenxin Kuaima (Baidu Comate)</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="IDE·云服务">
+<a class="c-link" href="https://replit.com" id="i-replit" rel="noopener" target="_blank">
+<span class="c-nm">Replit</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="长文本">
+<a class="c-link" href="https://sourcegraph.com" id="i-sourcegraph-cody" rel="noopener" target="_blank">
+<span class="c-nm">Sourcegraph Cody</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="编程助手·营销">
+<a class="c-link" href="https://www.coderabbit.ai" id="i-coderabbit" rel="noopener" target="_blank">
+<span class="c-nm">CodeRabbit</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="高性能">
+<a class="c-link" href="https://zed.dev" id="i-zed" rel="noopener" target="_blank">
+<span class="c-nm">Zed</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="本地部署·开源">
+<a class="c-link" href="https://tabbyml.com" id="i-tabby" rel="noopener" target="_blank">
+<span class="c-nm">Tabby</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="Agent·开源">
+<a class="c-link" href="https://cline.bot" id="i-cline" rel="noopener" target="_blank">
+<span class="c-nm">Cline</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="编程助手·前端">
+<a class="c-link" href="https://lovable.dev" id="i-lovable" rel="noopener" target="_blank">
+<span class="c-nm">Lovable</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="前端·UI生成">
+<a class="c-link" href="https://tempo.new" id="i-tempo" rel="noopener" target="_blank">
+<span class="c-nm">Tempo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="UI生成·编程助手">
+<a class="c-link" href="https://www.animaapp.com" id="i-anima" rel="noopener" target="_blank">
+<span class="c-nm">Anima</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="UI生成·编程助手">
+<a class="c-link" href="https://www.locofy.ai" id="i-locofy" rel="noopener" target="_blank">
+<span class="c-nm">Locofy</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="可视化·前端">
+<a class="c-link" href="https://www.builder.io" id="i-builderio" rel="noopener" target="_blank">
+<span class="c-nm">Builder.io</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="Agent·开源">
+<a class="c-link" href="https://github.com/Significant-Gravitas/AutoGPT" id="i-autogpt" rel="noopener" target="_blank">
+<span class="c-nm">AutoGPT</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="工作流·可视化">
+<a class="c-link" href="https://dify.ai" id="i-dify" rel="noopener" target="_blank">
+<span class="c-nm">Dify</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="大厂">
+<a class="c-link" href="https://www.coze.cn" id="i-扣子-coze" rel="noopener" target="_blank">
+<span class="c-nm">Coze</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="多语言">
+<a class="c-link" href="https://www.coze.com" id="i-coze" rel="noopener" target="_blank">
+<span class="c-nm">Coze</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="Agent">
+<a class="c-link" href="https://manus.im" id="i-manus" rel="noopener" target="_blank">
+<span class="c-nm">Manus</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="大厂·Agent">
+<a class="c-link" href="https://agents.baidu.com" id="i-百宝箱" rel="noopener" target="_blank">
+<span class="c-nm">Baidu AI Studio Agents</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="工作流">
+<a class="c-link" href="https://langchain.com/langgraph" id="i-langgraph" rel="noopener" target="_blank">
+<span class="c-nm">LangGraph</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="Agent·协作">
+<a class="c-link" href="https://www.crewai.com" id="i-crewai" rel="noopener" target="_blank">
+<span class="c-nm">CrewAI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="工作流">
+<a class="c-link" href="https://relevanceai.com" id="i-relevance-ai" rel="noopener" target="_blank">
+<span class="c-nm">Relevance AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="开源">
+<a class="c-link" href="https://superagent.sh" id="i-superagent" rel="noopener" target="_blank">
+<span class="c-nm">Superagent</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="开源">
+<a class="c-link" href="https://botpress.com" id="i-botpress" rel="noopener" target="_blank">
+<span class="c-nm">Botpress</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="可视化·云服务">
+<a class="c-link" href="https://github.com/smythos/sre" id="i-smythos" rel="noopener" target="_blank">
+<span class="c-nm">SmythOS</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="编程助手·IDE">
+<a class="c-link" href="https://antigravity.google" id="i-google-antigravity" rel="noopener" target="_blank">
+<span class="c-nm">Google Antigravity</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="编程助手·IDE">
+<a class="c-link" href="https://www.trae.ai" id="i-trae" rel="noopener" target="_blank">
+<span class="c-nm">Trae</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="命令行·编程助手">
+<a class="c-link" href="https://github.com/anthropics/claude-code" id="i-claude-code-cli" rel="noopener" target="_blank">
+<span class="c-nm">Claude Code CLI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="命令行·编程助手">
+<a class="c-link" href="https://github.com/openai/codex" id="i-codex-cli" rel="noopener" target="_blank">
+<span class="c-nm">Codex CLI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="命令行·开源">
+<a class="c-link" href="https://github.com/google-gemini/gemini-cli" id="i-gemini-cli" rel="noopener" target="_blank">
+<span class="c-nm">Gemini CLI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="编程助手·IDE">
+<a class="c-link" href="https://kiro.dev" id="i-kiro" rel="noopener" target="_blank">
+<span class="c-nm">Kiro</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="命令行·开源">
+<a class="c-link" href="https://opencode.ai" id="i-opencode" rel="noopener" target="_blank">
+<span class="c-nm">OpenCode</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="编程助手·云服务">
+<a class="c-link" href="https://ampcode.com" id="i-amp" rel="noopener" target="_blank">
+<span class="c-nm">Amp</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="coding" data-tags="命令行·开源">
+<a class="c-link" href="https://github.com/aaif-goose/goose" id="i-goose" rel="noopener" target="_blank">
+<span class="c-nm">Goose</span>
+</a>
+</div>
+</div>
+</section>
+<section class="cat-group" data-cat="gen" id="cat-gen">
+<h2 class="cat-h"><span aria-hidden="true" class="cat-dot"></span>Multimodal generation</h2>
+<div class="grid">
+<div class="card-wrap" data-cat="gen" data-tags="视频生成·多模态">
+<a class="c-link" href="https://deepmind.google/models/gemini-omni/" id="i-gemini-omni" rel="noopener" target="_blank">
+<span class="c-nm">Gemini Omni</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="设计">
+<a class="c-link" href="https://www.canva.com" id="i-canva" rel="noopener" target="_blank">
+<span class="c-nm">Canva</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="大厂·设计">
+<a class="c-link" href="https://designer.microsoft.com" id="i-microsoft-designer" rel="noopener" target="_blank">
+<span class="c-nm">Microsoft Designer</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="UI生成">
+<a class="c-link" href="https://uizard.io" id="i-uizard" rel="noopener" target="_blank">
+<span class="c-nm">Uizard</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="国产·UI生成">
+<a class="c-link" href="https://js.design/ai" id="i-即时-ai" rel="noopener" target="_blank">
+<span class="c-nm">Jishi AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="图像生成">
+<a class="c-link" href="https://www.midjourney.com" id="i-midjourney" rel="noopener" target="_blank">
+<span class="c-nm">Midjourney</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="开源·本地部署">
+<a class="c-link" href="https://stability.ai" id="i-stable-diffusion" rel="noopener" target="_blank">
+<span class="c-nm">Stable Diffusion</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="工作流·开源">
+<a class="c-link" href="https://github.com/comfyanonymous/ComfyUI" id="i-comfyui" rel="noopener" target="_blank">
+<span class="c-nm">ComfyUI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="图像生成·游戏">
+<a class="c-link" href="https://leonardo.ai" id="i-leonardo-ai" rel="noopener" target="_blank">
+<span class="c-nm">Leonardo AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="大厂·设计">
+<a class="c-link" href="https://tongyi.aliyun.com/wanxiang" id="i-通义万相" rel="noopener" target="_blank">
+<span class="c-nm">Tongyi Wanxiang</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="视频生成·模型微调">
+<a class="c-link" href="https://www.seaart.ai" id="i-seaart" rel="noopener" target="_blank">
+<span class="c-nm">SeaArt</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="实时·图像生成">
+<a class="c-link" href="https://www.krea.ai" id="i-krea-ai" rel="noopener" target="_blank">
+<span class="c-nm">Krea AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="图像生成">
+<a class="c-link" href="https://clipdrop.co" id="i-clipdrop" rel="noopener" target="_blank">
+<span class="c-nm">Clipdrop</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="社区·免费">
+<a class="c-link" href="https://tensor.art" id="i-tensorart" rel="noopener" target="_blank">
+<span class="c-nm">Tensor.art</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="视频生成">
+<a class="c-link" href="https://runway.com" id="i-runway" rel="noopener" target="_blank">
+<span class="c-nm">Runway</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="数字人·语音克隆">
+<a class="c-link" href="https://www.heygen.com" id="i-heygen" rel="noopener" target="_blank">
+<span class="c-nm">HeyGen</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="数字人·企业级">
+<a class="c-link" href="https://www.synthesia.io" id="i-synthesia" rel="noopener" target="_blank">
+<span class="c-nm">Synthesia</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="3D生成">
+<a class="c-link" href="https://lumalabs.ai" id="i-luma-ai" rel="noopener" target="_blank">
+<span class="c-nm">Luma AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="国产">
+<a class="c-link" href="https://jimeng.jianying.com" id="i-即梦" rel="noopener" target="_blank">
+<span class="c-nm">Dreamina</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="免费·视频生成">
+<a class="c-link" href="https://pixverse.ai" id="i-pixverse" rel="noopener" target="_blank">
+<span class="c-nm">Pixverse</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="视频生成">
+<a class="c-link" href="https://www.vidu.cn" id="i-vidu" rel="noopener" target="_blank">
+<span class="c-nm">Vidu</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="视频生成">
+<a class="c-link" href="https://www.capcut.cn" id="i-剪映" rel="noopener" target="_blank">
+<span class="c-nm">CapCut</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="设计·视频生成">
+<a class="c-link" href="https://www.genmo.ai" id="i-genmo" rel="noopener" target="_blank">
+<span class="c-nm">Genmo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="营销·工作流">
+<a class="c-link" href="https://invideo.io" id="i-invideo-ai" rel="noopener" target="_blank">
+<span class="c-nm">invideo AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="语音合成·视频生成">
+<a class="c-link" href="https://fliki.ai" id="i-fliki" rel="noopener" target="_blank">
+<span class="c-nm">Fliki</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="播客">
+<a class="c-link" href="https://www.descript.com" id="i-descript" rel="noopener" target="_blank">
+<span class="c-nm">Descript</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="音乐生成">
+<a class="c-link" href="https://suno.com" id="i-suno" rel="noopener" target="_blank">
+<span class="c-nm">Suno</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="音乐生成">
+<a class="c-link" href="https://www.udio.com" id="i-udio" rel="noopener" target="_blank">
+<span class="c-nm">Udio</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="语音克隆·语音合成">
+<a class="c-link" href="https://elevenlabs.io" id="i-elevenlabs" rel="noopener" target="_blank">
+<span class="c-nm">ElevenLabs</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="语音合成·多语言">
+<a class="c-link" href="https://www.moyin.com" id="i-魔音工坊" rel="noopener" target="_blank">
+<span class="c-nm">Moyin</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="语音合成">
+<a class="c-link" href="https://murf.ai" id="i-murf-ai" rel="noopener" target="_blank">
+<span class="c-nm">Murf AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="教育">
+<a class="c-link" href="https://www.speak.com" id="i-speak" rel="noopener" target="_blank">
+<span class="c-nm">Speak</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="音乐生成">
+<a class="c-link" href="https://www.aiva.ai" id="i-aiva" rel="noopener" target="_blank">
+<span class="c-nm">AIVA</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="音乐生成">
+<a class="c-link" href="https://soundraw.io" id="i-soundraw" rel="noopener" target="_blank">
+<span class="c-nm">Soundraw</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="音乐生成">
+<a class="c-link" href="https://boomy.com" id="i-boomy" rel="noopener" target="_blank">
+<span class="c-nm">Boomy</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="3D生成·游戏">
+<a class="c-link" href="https://www.meshy.ai" id="i-meshy" rel="noopener" target="_blank">
+<span class="c-nm">Meshy</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="3D生成">
+<a class="c-link" href="https://www.tripo3d.ai" id="i-tripo-ai" rel="noopener" target="_blank">
+<span class="c-nm">Tripo AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="数字人">
+<a class="c-link" href="https://hyper3d.ai" id="i-rodin" rel="noopener" target="_blank">
+<span class="c-nm">Rodin</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="实时">
+<a class="c-link" href="https://spline.design" id="i-spline-ai" rel="noopener" target="_blank">
+<span class="c-nm">Spline AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="视频生成">
+<a class="c-link" href="https://www.deepmotion.com" id="i-deepmotion" rel="noopener" target="_blank">
+<span class="c-nm">DeepMotion</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="游戏">
+<a class="c-link" href="https://www.kaedim3d.com" id="i-kaedim" rel="noopener" target="_blank">
+<span class="c-nm">Kaedim</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="数字人·大厂">
+<a class="c-link" href="https://www.xiaoice.com" id="i-小冰" rel="noopener" target="_blank">
+<span class="c-nm">Xiaoice</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="数字人·视频生成">
+<a class="c-link" href="https://www.d-id.com" id="i-d-id" rel="noopener" target="_blank">
+<span class="c-nm">D-ID</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="企业级·数字人">
+<a class="c-link" href="https://hourone.ai" id="i-hour-one" rel="noopener" target="_blank">
+<span class="c-nm">Hour One</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="多语言">
+<a class="c-link" href="https://www.deepbrain.io" id="i-deepbrain-ai" rel="noopener" target="_blank">
+<span class="c-nm">DeepBrain AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="图像生成·开源">
+<a class="c-link" href="https://bfl.ai/" id="i-flux" rel="noopener" target="_blank">
+<span class="c-nm">FLUX</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="图像生成·设计">
+<a class="c-link" href="https://ideogram.ai" id="i-ideogram" rel="noopener" target="_blank">
+<span class="c-nm">Ideogram</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="视频生成·大厂">
+<a class="c-link" href="https://deepmind.google/technologies/veo/" id="i-veo" rel="noopener" target="_blank">
+<span class="c-nm">Veo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="视频生成·国产">
+<a class="c-link" href="https://hailuoai.video" id="i-hailuo-video" rel="noopener" target="_blank">
+<span class="c-nm">Hailuo Video</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="语音合成·开源">
+<a class="c-link" href="https://github.com/openai/whisper" id="i-whisper" rel="noopener" target="_blank">
+<span class="c-nm">Whisper</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="语音合成·API">
+<a class="c-link" href="https://www.deepgram.com" id="i-deepgram" rel="noopener" target="_blank">
+<span class="c-nm">Deepgram</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="图像生成·设计">
+<a class="c-link" href="https://www.adobe.com/products/firefly.html" id="i-adobe-firefly" rel="noopener" target="_blank">
+<span class="c-nm">Adobe Firefly</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="图像生成·办公">
+<a class="c-link" href="https://pics.google.com/" id="i-google-pics" rel="noopener" target="_blank">
+<span class="c-nm">Google Pics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="视频生成·国产">
+<a class="c-link" href="https://klingai.com/" id="i-可灵-ai" rel="noopener" target="_blank">
+<span class="c-nm">Kling AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="视频生成·国产">
+<a class="c-link" href="https://wan.video/" id="i-wan-30" rel="noopener" target="_blank">
+<span class="c-nm">Wan 3.0</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="视频生成">
+<a class="c-link" href="https://pika.art/" id="i-pika-labs" rel="noopener" target="_blank">
+<span class="c-nm">Pika</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="图像生成·国产">
+<a class="c-link" href="https://seed.bytedance.com/seedream5_5" id="i-seedream-55" rel="noopener" target="_blank">
+<span class="c-nm">Seedream 5.5</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="gen" data-tags="视频生成·国产">
+<a class="c-link" href="https://seed.bytedance.com/seedance2_5" id="i-seedance-25" rel="noopener" target="_blank">
+<span class="c-nm">Seedance 2.5</span>
+</a>
+</div>
+</div>
+</section>
+<section class="cat-group" data-cat="app" id="cat-app">
+<h2 class="cat-h"><span aria-hidden="true" class="cat-dot"></span>Applications</h2>
+<div class="grid">
+<div class="card-wrap" data-cat="app" data-tags="办公">
+<a class="c-link" href="https://gamma.app" id="i-gamma" rel="noopener" target="_blank">
+<span class="c-nm">Gamma</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="营销·写作">
+<a class="c-link" href="https://www.jasper.ai" id="i-jasper" rel="noopener" target="_blank">
+<span class="c-nm">Jasper</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="营销·工作流">
+<a class="c-link" href="https://www.copy.ai" id="i-copyai" rel="noopener" target="_blank">
+<span class="c-nm">Copy.ai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="写作">
+<a class="c-link" href="https://www.grammarly.com" id="i-grammarly" rel="noopener" target="_blank">
+<span class="c-nm">Grammarly</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="会议·翻译">
+<a class="c-link" href="https://tingwu.aliyun.com" id="i-通义听悟" rel="noopener" target="_blank">
+<span class="c-nm">Tongyi Tingwu</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="会议">
+<a class="c-link" href="https://www.iflyrec.com" id="i-讯飞听见" rel="noopener" target="_blank">
+<span class="c-nm">iFLYTEK Listen</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="会议">
+<a class="c-link" href="https://otter.ai" id="i-otterai" rel="noopener" target="_blank">
+<span class="c-nm">Otter.ai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="办公·RAG">
+<a class="c-link" href="https://www.notion.so/product/ai" id="i-notion-ai" rel="noopener" target="_blank">
+<span class="c-nm">Notion AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="办公·国产">
+<a class="c-link" href="https://ai.wps.cn" id="i-wps-ai" rel="noopener" target="_blank">
+<span class="c-nm">WPS AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="多语言">
+<a class="c-link" href="https://rytr.me" id="i-rytr" rel="noopener" target="_blank">
+<span class="c-nm">Rytr</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="营销">
+<a class="c-link" href="https://writesonic.com" id="i-writesonic" rel="noopener" target="_blank">
+<span class="c-nm">Writesonic</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="学术">
+<a class="c-link" href="https://jenni.ai" id="i-jenni-ai" rel="noopener" target="_blank">
+<span class="c-nm">Jenni AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="科研·大厂">
+<a class="c-link" href="https://alphafold.ebi.ac.uk" id="i-alphafold-db" rel="noopener" target="_blank">
+<span class="c-nm">AlphaFold DB</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="科研·学术">
+<a class="c-link" href="https://robetta.bakerlab.org/" id="i-rosettafold" rel="noopener" target="_blank">
+<span class="c-nm">RoseTTAFold</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="医疗·大厂">
+<a class="c-link" href="https://www.nvidia.com/en-us/clara/bionemo" id="i-nvidia-bionemo" rel="noopener" target="_blank">
+<span class="c-nm">NVIDIA BioNeMo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="医疗·大厂">
+<a class="c-link" href="https://www.isomorphiclabs.com" id="i-isomorphic-labs" rel="noopener" target="_blank">
+<span class="c-nm">Isomorphic Labs</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="医疗">
+<a class="c-link" href="https://www.recursion.com" id="i-recursion" rel="noopener" target="_blank">
+<span class="c-nm">Recursion</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="医疗">
+<a class="c-link" href="https://www.viz.ai" id="i-vizai" rel="noopener" target="_blank">
+<span class="c-nm">Viz.ai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="医疗">
+<a class="c-link" href="https://www.pathai.com" id="i-pathai" rel="noopener" target="_blank">
+<span class="c-nm">PathAI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="医疗">
+<a class="c-link" href="https://www.aidoc.com" id="i-aidoc" rel="noopener" target="_blank">
+<span class="c-nm">Aidoc</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="医疗">
+<a class="c-link" href="https://www.butterflynetwork.com" id="i-butterfly-network" rel="noopener" target="_blank">
+<span class="c-nm">Butterfly Network</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="医疗">
+<a class="c-link" href="https://www.tempus.com" id="i-tempus" rel="noopener" target="_blank">
+<span class="c-nm">Tempus</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="医疗">
+<a class="c-link" href="https://www.infervision.com" id="i-推想科技" rel="noopener" target="_blank">
+<span class="c-nm">Infervision</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="法律·办公">
+<a class="c-link" href="https://www.harvey.ai" id="i-harvey-ai" rel="noopener" target="_blank">
+<span class="c-nm">Harvey AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="法律·合规">
+<a class="c-link" href="https://www.lawgeex.com" id="i-lawgeex" rel="noopener" target="_blank">
+<span class="c-nm">Lawgeex</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="法律·企业级">
+<a class="c-link" href="https://ironcladapp.com" id="i-ironclad" rel="noopener" target="_blank">
+<span class="c-nm">Ironclad</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="法律">
+<a class="c-link" href="https://www.everlaw.com" id="i-everlaw" rel="noopener" target="_blank">
+<span class="c-nm">Everlaw</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="国产·法律">
+<a class="c-link" href="https://www.powerlaw.ai" id="i-幂律智能" rel="noopener" target="_blank">
+<span class="c-nm">Milvue</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="金融">
+<a class="c-link" href="https://www.kensho.com" id="i-kensho" rel="noopener" target="_blank">
+<span class="c-nm">Kensho</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="模型微调·API">
+<a class="c-link" href="https://alpaca.markets" id="i-alpaca" rel="noopener" target="_blank">
+<span class="c-nm">Alpaca</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="模型微调·金融">
+<a class="c-link" href="https://www.quantconnect.com" id="i-quantconnect" rel="noopener" target="_blank">
+<span class="c-nm">QuantConnect</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="链上数据">
+<a class="c-link" href="https://www.alpha-sense.com" id="i-alphasense" rel="noopener" target="_blank">
+<span class="c-nm">AlphaSense</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="金融·评测">
+<a class="c-link" href="https://numer.ai" id="i-numerai" rel="noopener" target="_blank">
+<span class="c-nm">Numerai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="金融">
+<a class="c-link" href="https://www.kavout.com" id="i-kavout" rel="noopener" target="_blank">
+<span class="c-nm">Kavout</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="教育">
+<a class="c-link" href="https://www.khanmigo.ai" id="i-khanmigo" rel="noopener" target="_blank">
+<span class="c-nm">Khanmigo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="数字人">
+<a class="c-link" href="https://www.duolingo.com/max" id="i-duolingo-max" rel="noopener" target="_blank">
+<span class="c-nm">Duolingo Max</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="Agent·教育">
+<a class="c-link" href="https://quizlet.com" id="i-quizlet" rel="noopener" target="_blank">
+<span class="c-nm">Quizlet</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="教育">
+<a class="c-link" href="https://www.century.tech" id="i-century-tech" rel="noopener" target="_blank">
+<span class="c-nm">Century Tech</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="科研">
+<a class="c-link" href="https://www.carnegielearning.com" id="i-carnegie-learning" rel="noopener" target="_blank">
+<span class="c-nm">Carnegie Learning</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="国产">
+<a class="c-link" href="https://www.squirrelai.com" id="i-squirrel-ai" rel="noopener" target="_blank">
+<span class="c-nm">Squirrel AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="写作">
+<a class="c-link" href="https://www.persado.com" id="i-persado" rel="noopener" target="_blank">
+<span class="c-nm">Persado</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="营销">
+<a class="c-link" href="https://albert.ai" id="i-albert-ai" rel="noopener" target="_blank">
+<span class="c-nm">Albert AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="写作">
+<a class="c-link" href="https://anyword.com" id="i-anyword" rel="noopener" target="_blank">
+<span class="c-nm">Anyword</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="营销">
+<a class="c-link" href="https://www.optimove.com" id="i-optimove" rel="noopener" target="_blank">
+<span class="c-nm">Optimove</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="设计">
+<a class="c-link" href="https://www.pencil.com" id="i-pencil" rel="noopener" target="_blank">
+<span class="c-nm">Pencil</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="IDE·命令行·Agent">
+<a class="c-link" href="https://tools.specul.com/en/" id="i-ai-工具" rel="noopener" target="_blank">
+<span class="c-nm">AI Tools</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="图像生成·设计">
+<a class="c-link" href="https://magicstudio.com/" id="i-magic-studio" rel="noopener" target="_blank">
+<span class="c-nm">Magic Studio</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="设计·办公">
+<a class="c-link" href="https://www.beautiful.ai/" id="i-beautifulai" rel="noopener" target="_blank">
+<span class="c-nm">Beautiful.ai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="办公·可视化">
+<a class="c-link" href="https://tome.app/" id="i-tome" rel="noopener" target="_blank">
+<span class="c-nm">Tome</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="办公">
+<a class="c-link" href="https://decktopus.com/" id="i-decktopus" rel="noopener" target="_blank">
+<span class="c-nm">Decktopus</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="app" data-tags="办公·设计">
+<a class="c-link" href="https://plusai.com/" id="i-plus-ai" rel="noopener" target="_blank">
+<span class="c-nm">Plus AI</span>
+</a>
+</div>
+</div>
+</section>
+<section class="cat-group" data-cat="model" id="cat-model">
+<h2 class="cat-h"><span aria-hidden="true" class="cat-dot"></span>Model providers</h2>
+<div class="grid">
+<div class="card-wrap" data-cat="model" data-tags="社区·开源">
+<a class="c-link" href="https://huggingface.co" id="i-hugging-face" rel="noopener" target="_blank">
+<span class="c-nm">Hugging Face</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="大厂·国产">
+<a class="c-link" href="https://modelscope.cn" id="i-modelscope-魔搭" rel="noopener" target="_blank">
+<span class="c-nm">ModelScope</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="本地部署">
+<a class="c-link" href="https://ollama.com" id="i-ollama" rel="noopener" target="_blank">
+<span class="c-nm">Ollama</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="云服务·API">
+<a class="c-link" href="https://replicate.com" id="i-replicate" rel="noopener" target="_blank">
+<span class="c-nm">Replicate</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="社区">
+<a class="c-link" href="https://civitai.com" id="i-civitai" rel="noopener" target="_blank">
+<span class="c-nm">Civitai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="API">
+<a class="c-link" href="https://openrouter.ai" id="i-openrouter" rel="noopener" target="_blank">
+<span class="c-nm">OpenRouter</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="推理·模型微调">
+<a class="c-link" href="https://www.together.ai" id="i-together-ai" rel="noopener" target="_blank">
+<span class="c-nm">Together AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="高性能">
+<a class="c-link" href="https://fireworks.ai" id="i-fireworks-ai" rel="noopener" target="_blank">
+<span class="c-nm">Fireworks AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="芯片设计·高性能">
+<a class="c-link" href="https://groq.com" id="i-groq" rel="noopener" target="_blank">
+<span class="c-nm">Groq</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="云服务">
+<a class="c-link" href="https://www.anyscale.com" id="i-anyscale" rel="noopener" target="_blank">
+<span class="c-nm">Anyscale</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="云服务·GPU">
+<a class="c-link" href="https://modal.com" id="i-modal" rel="noopener" target="_blank">
+<span class="c-nm">Modal</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="云服务·API">
+<a class="c-link" href="https://www.banana.dev" id="i-banana-dev" rel="noopener" target="_blank">
+<span class="c-nm">Banana Dev</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="云服务">
+<a class="c-link" href="https://www.baseten.co" id="i-baseten" rel="noopener" target="_blank">
+<span class="c-nm">Baseten</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="API">
+<a class="c-link" href="https://www.tryleap.ai" id="i-leap-ai" rel="noopener" target="_blank">
+<span class="c-nm">Leap AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="大厂·开源">
+<a class="c-link" href="https://dev.meta.ai" id="i-llama" rel="noopener" target="_blank">
+<span class="c-nm">Llama</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="大厂">
+<a class="c-link" href="https://github.com/QwenLM/Qwen" id="i-qwen" rel="noopener" target="_blank">
+<span class="c-nm">Qwen</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="大厂">
+<a class="c-link" href="https://deepmind.google/models/gemma/" id="i-gemma" rel="noopener" target="_blank">
+<span class="c-nm">Gemma</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="大厂">
+<a class="c-link" href="https://azure.microsoft.com/products/phi" id="i-phi" rel="noopener" target="_blank">
+<span class="c-nm">Phi</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="高性能">
+<a class="c-link" href="https://huggingface.co/deepseek-ai" id="i-deepseek-models" rel="noopener" target="_blank">
+<span class="c-nm">DeepSeek Models</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="大厂">
+<a class="c-link" href="https://www.databricks.com" id="i-dbrx-by-databricks" rel="noopener" target="_blank">
+<span class="c-nm">DBRX by Databricks</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="学术·开源">
+<a class="c-link" href="https://allenai.org/olmo" id="i-olmo-by-allen-ai" rel="noopener" target="_blank">
+<span class="c-nm">OLMo by Allen AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="大厂·企业级">
+<a class="c-link" href="https://www.ibm.com/granite" id="i-ibm-granite" rel="noopener" target="_blank">
+<span class="c-nm">IBM Granite</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="企业级·编程助手">
+<a class="c-link" href="https://www.snowflake.com" id="i-snowflake-arctic" rel="noopener" target="_blank">
+<span class="c-nm">Snowflake Arctic</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="本地部署">
+<a class="c-link" href="https://lmstudio.ai" id="i-lm-studio" rel="noopener" target="_blank">
+<span class="c-nm">LM Studio</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="本地部署·高性能">
+<a class="c-link" href="https://docs.vllm.ai" id="i-vllm" rel="noopener" target="_blank">
+<span class="c-nm">vLLM</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="本地部署·开源">
+<a class="c-link" href="https://github.com/ggml-org/llama.cpp" id="i-llamacpp" rel="noopener" target="_blank">
+<span class="c-nm">llama.cpp</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="本地部署·开源">
+<a class="c-link" href="https://ml-explore.github.io/mlx/build/html/index.html" id="i-mlx" rel="noopener" target="_blank">
+<span class="c-nm">MLX</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="本地部署·高性能">
+<a class="c-link" href="https://docs.sglang.io/" id="i-sglang" rel="noopener" target="_blank">
+<span class="c-nm">SGLang</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="本地部署·高性能">
+<a class="c-link" href="https://docs.nvidia.com/tensorrt-llm/" id="i-tensorrt-llm" rel="noopener" target="_blank">
+<span class="c-nm">TensorRT-LLM</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="大厂·API">
+<a class="c-link" href="https://www.aliyun.com/product/bailian" id="i-阿里云百炼" rel="noopener" target="_blank">
+<span class="c-nm">Alibaba Cloud Bailian</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="大厂·API">
+<a class="c-link" href="https://www.volcengine.com/product/ark" id="i-火山方舟" rel="noopener" target="_blank">
+<span class="c-nm">Volcengine Ark</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="大厂·国产">
+<a class="c-link" href="https://www.huaweicloud.com/product/pangu.html" id="i-华为盘古" rel="noopener" target="_blank">
+<span class="c-nm">Huawei Pangu</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="大厂·RAG">
+<a class="c-link" href="https://cloud.baidu.com/product/qianfan.html" id="i-百度智能云千帆" rel="noopener" target="_blank">
+<span class="c-nm">Baidu Qianfan</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="国产·API">
+<a class="c-link" href="https://bigmodel.cn/" id="i-智谱-bigmodel" rel="noopener" target="_blank">
+<span class="c-nm">Zhipu BigModel</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="多模态·API">
+<a class="c-link" href="https://platform.minimax.cn/" id="i-minimax-开放平台" rel="noopener" target="_blank">
+<span class="c-nm">MiniMax Open Platform</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="model" data-tags="国产·API">
+<a class="c-link" href="https://platform.kimi.com/" id="i-moonshot-开放平台" rel="noopener" target="_blank">
+<span class="c-nm">Moonshot Open Platform</span>
+</a>
+</div>
+</div>
+</section>
+<section class="cat-group" data-cat="dev" id="cat-dev">
+<h2 class="cat-h"><span aria-hidden="true" class="cat-dot"></span>Developer tools</h2>
+<div class="grid">
+<div class="card-wrap" data-cat="dev" data-tags="云服务·RAG">
+<a class="c-link" href="https://www.pinecone.io" id="i-pinecone" rel="noopener" target="_blank">
+<span class="c-nm">Pinecone</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="开源">
+<a class="c-link" href="https://weaviate.io" id="i-weaviate" rel="noopener" target="_blank">
+<span class="c-nm">Weaviate</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="开源">
+<a class="c-link" href="https://www.trychroma.com" id="i-chroma" rel="noopener" target="_blank">
+<span class="c-nm">Chroma</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="开源·云服务">
+<a class="c-link" href="https://milvus.io" id="i-milvus" rel="noopener" target="_blank">
+<span class="c-nm">Milvus</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="高性能">
+<a class="c-link" href="https://qdrant.tech" id="i-qdrant" rel="noopener" target="_blank">
+<span class="c-nm">Qdrant</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="搜索">
+<a class="c-link" href="https://www.elastic.co" id="i-elasticsearch" rel="noopener" target="_blank">
+<span class="c-nm">Elasticsearch</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="工作流·基础设施">
+<a class="c-link" href="https://www.langchain.com" id="i-langchain" rel="noopener" target="_blank">
+<span class="c-nm">LangChain</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="RAG">
+<a class="c-link" href="https://www.llamaindex.ai" id="i-llamaindex" rel="noopener" target="_blank">
+<span class="c-nm">LlamaIndex</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="可观测">
+<a class="c-link" href="https://langfuse.com" id="i-langfuse" rel="noopener" target="_blank">
+<span class="c-nm">Langfuse</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="前端">
+<a class="c-link" href="https://ai-sdk.dev" id="i-vercel-ai-sdk" rel="noopener" target="_blank">
+<span class="c-nm">Vercel AI SDK</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="RAG">
+<a class="c-link" href="https://haystack.deepset.ai" id="i-haystack" rel="noopener" target="_blank">
+<span class="c-nm">Haystack</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="大厂·工业">
+<a class="c-link" href="https://www.tensorflow.org" id="i-tensorflow" rel="noopener" target="_blank">
+<span class="c-nm">TensorFlow</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="大厂·学术">
+<a class="c-link" href="https://pytorch.org" id="i-pytorch" rel="noopener" target="_blank">
+<span class="c-nm">PyTorch</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="图像生成·开源">
+<a class="c-link" href="https://opencv.org" id="i-opencv" rel="noopener" target="_blank">
+<span class="c-nm">OpenCV</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="API">
+<a class="c-link" href="https://keras.io" id="i-keras" rel="noopener" target="_blank">
+<span class="c-nm">Keras</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="跨链">
+<a class="c-link" href="https://onnx.ai" id="i-onnx" rel="noopener" target="_blank">
+<span class="c-nm">ONNX</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="大厂·高性能">
+<a class="c-link" href="https://docs.jax.dev/en/latest/" id="i-jax" rel="noopener" target="_blank">
+<span class="c-nm">JAX</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="可观测·可视化">
+<a class="c-link" href="https://forge.coreweave.com/wandb" id="i-weights--biases" rel="noopener" target="_blank">
+<span class="c-nm">Weights &amp; Biases</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="开源">
+<a class="c-link" href="https://mlflow.org" id="i-mlflow" rel="noopener" target="_blank">
+<span class="c-nm">MLflow</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="企业级">
+<a class="c-link" href="https://neptune.ai" id="i-neptuneai" rel="noopener" target="_blank">
+<span class="c-nm">Neptune.ai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="开源·工作流">
+<a class="c-link" href="https://clear.ml" id="i-clearml" rel="noopener" target="_blank">
+<span class="c-nm">ClearML</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="本地部署·API">
+<a class="c-link" href="https://www.bentoml.com" id="i-bentoml" rel="noopener" target="_blank">
+<span class="c-nm">BentoML</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="数据集">
+<a class="c-link" href="https://dagshub.com" id="i-dagshub" rel="noopener" target="_blank">
+<span class="c-nm">DagsHub</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="大厂·工作流">
+<a class="c-link" href="https://metaflow.org" id="i-metaflow" rel="noopener" target="_blank">
+<span class="c-nm">Metaflow</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="云服务">
+<a class="c-link" href="https://www.kubeflow.org" id="i-kubeflow" rel="noopener" target="_blank">
+<span class="c-nm">Kubeflow</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="云服务">
+<a class="c-link" href="https://seldon.io" id="i-seldon" rel="noopener" target="_blank">
+<span class="c-nm">Seldon</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="工作流">
+<a class="c-link" href="https://valohai.com" id="i-valohai" rel="noopener" target="_blank">
+<span class="c-nm">Valohai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="数据集·链上数据">
+<a class="c-link" href="https://scale.com" id="i-scale-ai" rel="noopener" target="_blank">
+<span class="c-nm">Scale AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="企业级">
+<a class="c-link" href="https://labelbox.com" id="i-labelbox" rel="noopener" target="_blank">
+<span class="c-nm">Labelbox</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="开源·多模态">
+<a class="c-link" href="https://labelstud.io" id="i-label-studio" rel="noopener" target="_blank">
+<span class="c-nm">Label Studio</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="工作流">
+<a class="c-link" href="https://www.superannotate.com" id="i-superannotate" rel="noopener" target="_blank">
+<span class="c-nm">SuperAnnotate</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="工作流">
+<a class="c-link" href="https://snorkel.ai" id="i-snorkel-ai" rel="noopener" target="_blank">
+<span class="c-nm">Snorkel AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="Web3·合规">
+<a class="c-link" href="https://www.credo.ai" id="i-credo-ai" rel="noopener" target="_blank">
+<span class="c-nm">Credo AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="安全">
+<a class="c-link" href="https://www.robustintelligence.com" id="i-robust-intelligence" rel="noopener" target="_blank">
+<span class="c-nm">Robust Intelligence</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="可观测·安全">
+<a class="c-link" href="https://www.arthur.ai" id="i-arthur-ai" rel="noopener" target="_blank">
+<span class="c-nm">Arthur AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="可观测">
+<a class="c-link" href="https://whylabs.ai" id="i-whylabs" rel="noopener" target="_blank">
+<span class="c-nm">WhyLabs</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="安全·开源">
+<a class="c-link" href="https://www.guardrailsai.com" id="i-guardrails-ai" rel="noopener" target="_blank">
+<span class="c-nm">Guardrails AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="评测">
+<a class="c-link" href="https://lmsys.org" id="i-lmsys-chatbot-arena" rel="noopener" target="_blank">
+<span class="c-nm">LMSYS Chatbot Arena</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="学术">
+<a class="c-link" href="https://crfm.stanford.edu/helm" id="i-stanford-helm" rel="noopener" target="_blank">
+<span class="c-nm">Stanford HELM</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="评测">
+<a class="c-link" href="https://galileo.ai/" id="i-galileo" rel="noopener" target="_blank">
+<span class="c-nm">Galileo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="开源">
+<a class="c-link" href="https://deepeval.com" id="i-deepeval" rel="noopener" target="_blank">
+<span class="c-nm">DeepEval</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="RAG·评测·开源">
+<a class="c-link" href="https://www.trulens.org" id="i-trulens" rel="noopener" target="_blank">
+<span class="c-nm">TruLens</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="API·Agent">
+<a class="c-link" href="https://composio.dev" id="i-composio" rel="noopener" target="_blank">
+<span class="c-nm">Composio</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="开源·工作流">
+<a class="c-link" href="https://github.com/microsoft/promptflow" id="i-prompt-flow" rel="noopener" target="_blank">
+<span class="c-nm">Prompt flow</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="API·搜索">
+<a class="c-link" href="https://exa.ai" id="i-exa" rel="noopener" target="_blank">
+<span class="c-nm">Exa</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="开源·高性能">
+<a class="c-link" href="https://github.com/huggingface/candle" id="i-candle" rel="noopener" target="_blank">
+<span class="c-nm">Candle</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="dev" data-tags="开源·Agent">
+<a class="c-link" href="https://github.com/modelcontextprotocol/servers" id="i-mcp-servers官方合集" rel="noopener" target="_blank">
+<span class="c-nm">MCP Servers (official collection)</span>
+</a>
+</div>
+</div>
+</section>
+<section class="cat-group" data-cat="infra" id="cat-infra">
+<h2 class="cat-h"><span aria-hidden="true" class="cat-dot"></span>Infrastructure</h2>
+<div class="grid">
+<div class="card-wrap" data-cat="infra" data-tags="GPU">
+<a class="c-link" href="https://www.nvidia.com" id="i-nvidia" rel="noopener" target="_blank">
+<span class="c-nm">NVIDIA</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="GPU·CPU">
+<a class="c-link" href="https://www.amd.com" id="i-amd" rel="noopener" target="_blank">
+<span class="c-nm">AMD</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="CPU·芯片设计">
+<a class="c-link" href="https://www.intel.com" id="i-intel" rel="noopener" target="_blank">
+<span class="c-nm">Intel</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://www.tsmc.com" id="i-台积电-tsmc" rel="noopener" target="_blank">
+<span class="c-nm">TSMC</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计·边缘计算">
+<a class="c-link" href="https://www.arm.com" id="i-arm" rel="noopener" target="_blank">
+<span class="c-nm">ARM</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="国产·GPU">
+<a class="c-link" href="https://www.cambricon.com" id="i-寒武纪" rel="noopener" target="_blank">
+<span class="c-nm">Cambricon</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="CPU·国产">
+<a class="c-link" href="https://www.hygon.cn" id="i-海光信息" rel="noopener" target="_blank">
+<span class="c-nm">Hygon</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="GPU·模型微调">
+<a class="c-link" href="https://www.mthreads.com" id="i-摩尔线程" rel="noopener" target="_blank">
+<span class="c-nm">Moore Threads</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="边缘计算·自动驾驶">
+<a class="c-link" href="https://www.horizon.auto" id="i-地平线" rel="noopener" target="_blank">
+<span class="c-nm">Horizon Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://www.cerebras.ai" id="i-cerebras" rel="noopener" target="_blank">
+<span class="c-nm">Cerebras</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://www.graphcore.ai" id="i-graphcore" rel="noopener" target="_blank">
+<span class="c-nm">Graphcore</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="数据集·企业级">
+<a class="c-link" href="https://sambanova.ai" id="i-sambanova" rel="noopener" target="_blank">
+<span class="c-nm">SambaNova</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="国产">
+<a class="c-link" href="https://www.hisilicon.com" id="i-华为海思" rel="noopener" target="_blank">
+<span class="c-nm">HiSilicon</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="GPU">
+<a class="c-link" href="https://www.birentech.com" id="i-壁仞科技" rel="noopener" target="_blank">
+<span class="c-nm">Biren</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="国产·云服务">
+<a class="c-link" href="https://www.enflame-tech.com" id="i-燧原科技" rel="noopener" target="_blank">
+<span class="c-nm">Enflame</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="GPU">
+<a class="c-link" href="https://www.imaginationtech.com" id="i-imagination" rel="noopener" target="_blank">
+<span class="c-nm">Imagination</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="大厂·国产">
+<a class="c-link" href="https://www.kunlunxin.com" id="i-昆仑芯" rel="noopener" target="_blank">
+<span class="c-nm">Kunlunxin</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="医疗">
+<a class="c-link" href="https://neuralink.com" id="i-neuralink" rel="noopener" target="_blank">
+<span class="c-nm">Neuralink</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="医疗">
+<a class="c-link" href="https://synchron.com" id="i-synchron" rel="noopener" target="_blank">
+<span class="c-nm">Synchron</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="医疗">
+<a class="c-link" href="https://blackrockneurotech.com" id="i-blackrock-neurotech" rel="noopener" target="_blank">
+<span class="c-nm">Blackrock Neurotech</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计·边缘计算">
+<a class="c-link" href="https://lightmatter.com" id="i-lightmatter" rel="noopener" target="_blank">
+<span class="c-nm">Lightmatter</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://ayarlabs.com" id="i-ayar-labs" rel="noopener" target="_blank">
+<span class="c-nm">Ayar Labs</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="国产·芯片设计">
+<a class="c-link" href="https://www.lightelligence.io" id="i-曦智科技" rel="noopener" target="_blank">
+<span class="c-nm">Lightelligence</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="量子计算·云服务">
+<a class="c-link" href="https://www.ibm.com/quantum" id="i-ibm-quantum" rel="noopener" target="_blank">
+<span class="c-nm">IBM Quantum</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="量子计算">
+<a class="c-link" href="https://quantumai.google" id="i-google-quantum-ai" rel="noopener" target="_blank">
+<span class="c-nm">Google Quantum AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="量子计算">
+<a class="c-link" href="https://ionq.com" id="i-ionq" rel="noopener" target="_blank">
+<span class="c-nm">IonQ</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="大厂">
+<a class="c-link" href="https://www.quantinuum.com" id="i-quantinuum" rel="noopener" target="_blank">
+<span class="c-nm">Quantinuum</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="国产·量子计算">
+<a class="c-link" href="https://www.originqc.com.cn" id="i-本源量子" rel="noopener" target="_blank">
+<span class="c-nm">Origin Quantum</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="算力云·模型微调">
+<a class="c-link" href="https://lambda.ai" id="i-lambda-labs" rel="noopener" target="_blank">
+<span class="c-nm">Lambda Labs</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="算力云·社区">
+<a class="c-link" href="https://www.coreweave.com" id="i-coreweave" rel="noopener" target="_blank">
+<span class="c-nm">CoreWeave</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="算力云·国产">
+<a class="c-link" href="https://www.autodl.com" id="i-autodl" rel="noopener" target="_blank">
+<span class="c-nm">AutoDL</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="云服务">
+<a class="c-link" href="https://www.runpod.io" id="i-runpod" rel="noopener" target="_blank">
+<span class="c-nm">RunPod</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="IDE·GPU">
+<a class="c-link" href="https://www.paperspace.com" id="i-paperspace" rel="noopener" target="_blank">
+<span class="c-nm">Paperspace</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="Web3·基础设施">
+<a class="c-link" href="https://vast.ai" id="i-vastai" rel="noopener" target="_blank">
+<span class="c-nm">Vast.ai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="GPU">
+<a class="c-link" href="https://jarvislabs.ai" id="i-jarvislabs" rel="noopener" target="_blank">
+<span class="c-nm">JarvisLabs</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://www.cadence.com" id="i-cadence" rel="noopener" target="_blank">
+<span class="c-nm">Cadence</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://www.synopsys.com" id="i-synopsys" rel="noopener" target="_blank">
+<span class="c-nm">Synopsys</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://www.keysight.com" id="i-keysight" rel="noopener" target="_blank">
+<span class="c-nm">Keysight</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="大厂·芯片设计">
+<a class="c-link" href="https://eda.sw.siemens.com" id="i-siemens-eda" rel="noopener" target="_blank">
+<span class="c-nm">Siemens EDA</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="存储">
+<a class="c-link" href="https://semiconductor.samsung.com" id="i-samsung-semiconductor" rel="noopener" target="_blank">
+<span class="c-nm">Samsung Semiconductor</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="存储">
+<a class="c-link" href="https://www.skhynix.com" id="i-sk-hynix" rel="noopener" target="_blank">
+<span class="c-nm">SK Hynix</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="存储">
+<a class="c-link" href="https://www.micron.com" id="i-micron" rel="noopener" target="_blank">
+<span class="c-nm">Micron</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="存储">
+<a class="c-link" href="https://www.westerndigital.com" id="i-western-digital" rel="noopener" target="_blank">
+<span class="c-nm">Western Digital</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="存储·国产">
+<a class="c-link" href="https://www.ymtc.com" id="i-长江存储-ymtc" rel="noopener" target="_blank">
+<span class="c-nm">YMTC</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://www.asml.com" id="i-asml" rel="noopener" target="_blank">
+<span class="c-nm">ASML</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="工作流">
+<a class="c-link" href="https://www.appliedmaterials.com" id="i-applied-materials" rel="noopener" target="_blank">
+<span class="c-nm">Applied Materials</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://www.lamresearch.com" id="i-lam-research" rel="noopener" target="_blank">
+<span class="c-nm">Lam Research</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://www.tel.com" id="i-tokyo-electron" rel="noopener" target="_blank">
+<span class="c-nm">Tokyo Electron</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计·国产">
+<a class="c-link" href="https://www.amec-inc.com" id="i-中微半导体-amec" rel="noopener" target="_blank">
+<span class="c-nm">AMEC</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://www.sifive.com" id="i-sifive" rel="noopener" target="_blank">
+<span class="c-nm">SiFive</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://riscv.org" id="i-risc-v-international" rel="noopener" target="_blank">
+<span class="c-nm">RISC-V International</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计·国产">
+<a class="c-link" href="https://www.starfivetech.com" id="i-赛昉科技-starfive" rel="noopener" target="_blank">
+<span class="c-nm">StarFive</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计">
+<a class="c-link" href="https://www.nucleisys.com" id="i-芯来科技-nuclei" rel="noopener" target="_blank">
+<span class="c-nm">Nuclei System Technology</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="GPU·算力云">
+<a class="c-link" href="https://www.esperanto.ai" id="i-esperanto" rel="noopener" target="_blank">
+<span class="c-nm">Esperanto</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="算力云·国产">
+<a class="c-link" href="https://www.infinigence.com/" id="i-无问芯穹" rel="noopener" target="_blank">
+<span class="c-nm">Infinigence AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="算力云·模型微调">
+<a class="c-link" href="https://www.luchentech.com/" id="i-潞晨科技" rel="noopener" target="_blank">
+<span class="c-nm">Luchen Tech</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="推理">
+<a class="c-link" href="https://www.qujingai.com/" id="i-趋境科技" rel="noopener" target="_blank">
+<span class="c-nm">Qujing AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="国产·云服务">
+<a class="c-link" href="https://www.qc-ai.cn/" id="i-清程极智" rel="noopener" target="_blank">
+<span class="c-nm">Qingcheng AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="芯片设计·国产">
+<a class="c-link" href="https://www.jiahe.ai/" id="i-中科加禾" rel="noopener" target="_blank">
+<span class="c-nm">Jiahe AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="国产·GPU">
+<a class="c-link" href="https://www.iluvatar.com/" id="i-天数智芯" rel="noopener" target="_blank">
+<span class="c-nm">Iluvatar CoreX</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="高性能·GPU">
+<a class="c-link" href="https://www.nvidia.com/en-us/products/rtx-spark/" id="i-nvidia-rtx-spark" rel="noopener" target="_blank">
+<span class="c-nm">NVIDIA RTX Spark</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="infra" data-tags="高性能·GPU">
+<a class="c-link" href="https://www.nvidia.com/en-us/products/workstations/dgx-spark/" id="i-nvidia-dgx-spark" rel="noopener" target="_blank">
+<span class="c-nm">NVIDIA DGX Spark</span>
+</a>
+</div>
+</div>
+</section>
+<section class="cat-group" data-cat="robot" id="cat-robot">
+<h2 class="cat-h"><span aria-hidden="true" class="cat-dot"></span>Robotics &amp; embodied</h2>
+<div class="grid">
+<div class="card-wrap" data-cat="robot" data-tags="大厂·人形机器人">
+<a class="c-link" href="https://www.tesla.com/AI" id="i-tesla-optimus" rel="noopener" target="_blank">
+<span class="c-nm">Tesla Optimus</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="人形机器人·大厂">
+<a class="c-link" href="https://www.figure.ai" id="i-figure-ai" rel="noopener" target="_blank">
+<span class="c-nm">Figure AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="人形机器人·四足">
+<a class="c-link" href="https://bostondynamics.com" id="i-boston-dynamics" rel="noopener" target="_blank">
+<span class="c-nm">Boston Dynamics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="四足·国产">
+<a class="c-link" href="https://www.unitree.com" id="i-unitree-宇树" rel="noopener" target="_blank">
+<span class="c-nm">Unitree</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="人形机器人·服务机器人">
+<a class="c-link" href="https://www.1x.tech" id="i-1x-technologies" rel="noopener" target="_blank">
+<span class="c-nm">1X Technologies</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="人形机器人·物流">
+<a class="c-link" href="https://agilityrobotics.com" id="i-agility-robotics" rel="noopener" target="_blank">
+<span class="c-nm">Agility Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="医疗·国产">
+<a class="c-link" href="https://www.fftai.com" id="i-傅利叶智能" rel="noopener" target="_blank">
+<span class="c-nm">Fourier</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="具身智能·大厂">
+<a class="c-link" href="https://www.agibot.com" id="i-智元机器人" rel="noopener" target="_blank">
+<span class="c-nm">AgiBot</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="人形机器人·物流">
+<a class="c-link" href="https://apptronik.com" id="i-apptronik" rel="noopener" target="_blank">
+<span class="c-nm">Apptronik</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="人形机器人·国产">
+<a class="c-link" href="https://www.ubtrobot.com" id="i-优必选科技" rel="noopener" target="_blank">
+<span class="c-nm">UBTECH</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="人形机器人·服务机器人">
+<a class="c-link" href="https://www.cloudminds.com" id="i-达闼机器人" rel="noopener" target="_blank">
+<span class="c-nm">CloudMinds</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="具身智能·国产">
+<a class="c-link" href="https://www.engineai.com.cn" id="i-逐际动力" rel="noopener" target="_blank">
+<span class="c-nm">EngineAI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="仿生·人形机器人">
+<a class="c-link" href="https://www.clonerobotics.com" id="i-clone-robotics" rel="noopener" target="_blank">
+<span class="c-nm">Clone Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="服务机器人·人形机器人">
+<a class="c-link" href="https://pal-robotics.com" id="i-pal-robotics" rel="noopener" target="_blank">
+<span class="c-nm">PAL Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="服务机器人">
+<a class="c-link" href="https://beyondimagination.co" id="i-beyond-imagination" rel="noopener" target="_blank">
+<span class="c-nm">Beyond Imagination</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="工业·协作">
+<a class="c-link" href="https://new.abb.com/products/robotics" id="i-abb-robotics" rel="noopener" target="_blank">
+<span class="c-nm">ABB Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="工业">
+<a class="c-link" href="https://www.fanuc.com" id="i-fanuc" rel="noopener" target="_blank">
+<span class="c-nm">FANUC</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="自动驾驶">
+<a class="c-link" href="https://www.kuka.com" id="i-kuka" rel="noopener" target="_blank">
+<span class="c-nm">KUKA</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="机械臂">
+<a class="c-link" href="https://www.yaskawa.com" id="i-yaskawa-安川" rel="noopener" target="_blank">
+<span class="c-nm">Yaskawa</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="国产">
+<a class="c-link" href="https://www.estun.com" id="i-埃斯顿自动化" rel="noopener" target="_blank">
+<span class="c-nm">Estun</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="大厂">
+<a class="c-link" href="https://www.siasun.com" id="i-新松机器人" rel="noopener" target="_blank">
+<span class="c-nm">SIASUN</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="物流">
+<a class="c-link" href="https://www.pudutech.com" id="i-普渡机器人" rel="noopener" target="_blank">
+<span class="c-nm">Pudu Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="企业级·物流">
+<a class="c-link" href="https://www.keenon.com" id="i-擎朗智能" rel="noopener" target="_blank">
+<span class="c-nm"> Keenon</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="服务机器人">
+<a class="c-link" href="https://www.gs-robot.com" id="i-高仙机器人" rel="noopener" target="_blank">
+<span class="c-nm">Gaussian Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="服务机器人">
+<a class="c-link" href="https://www.dreame.com" id="i-追觅科技" rel="noopener" target="_blank">
+<span class="c-nm">Dreame</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="服务机器人">
+<a class="c-link" href="https://www.ecovacs.com" id="i-科沃斯" rel="noopener" target="_blank">
+<span class="c-nm">ECOVACS</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="服务机器人">
+<a class="c-link" href="https://www.roborock.com" id="i-石头科技" rel="noopener" target="_blank">
+<span class="c-nm">Roborock</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="教育·评测">
+<a class="c-link" href="https://www.dji.com/robomaster-s1" id="i-大疆-robomaster" rel="noopener" target="_blank">
+<span class="c-nm">RoboMaster</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="开源">
+<a class="c-link" href="https://www.ros.org" id="i-rosorg" rel="noopener" target="_blank">
+<span class="c-nm">ROS.org</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="大厂·仿真">
+<a class="c-link" href="https://developer.nvidia.com/isaac" id="i-nvidia-isaac" rel="noopener" target="_blank">
+<span class="c-nm">NVIDIA Isaac</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="实时·工业">
+<a class="c-link" href="https://docs.ros.org/en/rolling" id="i-ros-2" rel="noopener" target="_blank">
+<span class="c-nm">ROS 2</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="协作·本地部署">
+<a class="c-link" href="https://www.universal-robots.com" id="i-universal-robots" rel="noopener" target="_blank">
+<span class="c-nm">Universal Robots</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="仿真·开源">
+<a class="c-link" href="https://mujoco.org" id="i-mujoco" rel="noopener" target="_blank">
+<span class="c-nm">MuJoCo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="仿真·大厂">
+<a class="c-link" href="https://www.nvidia.com/en-us/omniverse" id="i-nvidia-omniverse" rel="noopener" target="_blank">
+<span class="c-nm">NVIDIA Omniverse</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="仿真·多语言">
+<a class="c-link" href="https://www.coppeliarobotics.com" id="i-coppeliasim" rel="noopener" target="_blank">
+<span class="c-nm">CoppeliaSim</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="开源">
+<a class="c-link" href="https://cyberbotics.com" id="i-webots" rel="noopener" target="_blank">
+<span class="c-nm">Webots</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="开源·仿真">
+<a class="c-link" href="https://gazebosim.org" id="i-gazebo" rel="noopener" target="_blank">
+<span class="c-nm">Gazebo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="自动驾驶·大厂">
+<a class="c-link" href="https://waymo.com" id="i-waymo" rel="noopener" target="_blank">
+<span class="c-nm">Waymo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="自动驾驶">
+<a class="c-link" href="https://www.getcruise.com" id="i-cruise" rel="noopener" target="_blank">
+<span class="c-nm">Cruise</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="大厂·API">
+<a class="c-link" href="https://www.apollo.auto" id="i-百度-apollo" rel="noopener" target="_blank">
+<span class="c-nm">Apollo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="自动驾驶·物流">
+<a class="c-link" href="https://www.weride.ai" id="i-文远知行-weride" rel="noopener" target="_blank">
+<span class="c-nm">WeRide</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="自动驾驶">
+<a class="c-link" href="https://www.pony.ai" id="i-小马智行-ponyai" rel="noopener" target="_blank">
+<span class="c-nm">Pony.ai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="图像生成·自动驾驶">
+<a class="c-link" href="https://www.mobileye.com" id="i-mobileye" rel="noopener" target="_blank">
+<span class="c-nm">Mobileye</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="物流·企业级">
+<a class="c-link" href="https://www.nuro.ai" id="i-nuro" rel="noopener" target="_blank">
+<span class="c-nm">Nuro</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="物流·自动驾驶">
+<a class="c-link" href="https://aurora.tech" id="i-aurora" rel="noopener" target="_blank">
+<span class="c-nm">Aurora</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="大厂·自动驾驶">
+<a class="c-link" href="https://zoox.com" id="i-zoox" rel="noopener" target="_blank">
+<span class="c-nm">Zoox</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="物流">
+<a class="c-link" href="https://iamcreate.ai/" id="i-tusimple" rel="noopener" target="_blank">
+<span class="c-nm">TuSimple</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="物流·高性能">
+<a class="c-link" href="https://www.sec.gov/Archives/edgar/data/1827980/000110465923064691/tm2316862d1_ex99-1.htm" id="i-embark-trucks" rel="noopener" target="_blank">
+<span class="c-nm">Embark Trucks</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="Agent">
+<a class="c-link" href="https://www.skydio.com" id="i-skydio" rel="noopener" target="_blank">
+<span class="c-nm">Skydio</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="无人机">
+<a class="c-link" href="https://www.ehang.com" id="i-亿航智能-ehang" rel="noopener" target="_blank">
+<span class="c-nm">EHang</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="医疗·物流">
+<a class="c-link" href="https://www.zipline.com" id="i-zipline" rel="noopener" target="_blank">
+<span class="c-nm">Zipline</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="大厂·物流">
+<a class="c-link" href="https://wing.com" id="i-wing" rel="noopener" target="_blank">
+<span class="c-nm">Wing</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="农业·国产">
+<a class="c-link" href="https://www.xag.cn" id="i-极飞科技-xag" rel="noopener" target="_blank">
+<span class="c-nm">XAG</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="医疗">
+<a class="c-link" href="https://www.intuitive.com" id="i-intuitive-surgical" rel="noopener" target="_blank">
+<span class="c-nm">Intuitive Surgical</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="医疗·大厂">
+<a class="c-link" href="https://www.medtronic.com" id="i-medtronic-hugo" rel="noopener" target="_blank">
+<span class="c-nm">Medtronic Hugo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="医疗·机械臂">
+<a class="c-link" href="https://cmrsurgical.com" id="i-cmr-surgical" rel="noopener" target="_blank">
+<span class="c-nm">CMR Surgical</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="医疗·国产">
+<a class="c-link" href="https://www.tinavi.com/" id="i-天智航" rel="noopener" target="_blank">
+<span class="c-nm">TINAVI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="物流·服务机器人">
+<a class="c-link" href="https://www.geekplus.com" id="i-极智嘉-geek" rel="noopener" target="_blank">
+<span class="c-nm">Geek+</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="服务机器人·协作">
+<a class="c-link" href="https://locusrobotics.com" id="i-locus-robotics" rel="noopener" target="_blank">
+<span class="c-nm">Locus Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="服务机器人·物流">
+<a class="c-link" href="https://www.hairobotics.com" id="i-海柔创新" rel="noopener" target="_blank">
+<span class="c-nm">HAI ROBOTICS</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="物流">
+<a class="c-link" href="https://seegrid.com" id="i-seegrid" rel="noopener" target="_blank">
+<span class="c-nm">Seegrid</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="工业·医疗">
+<a class="c-link" href="https://www.eksobionics.com" id="i-ekso-bionics" rel="noopener" target="_blank">
+<span class="c-nm">Ekso Bionics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="医疗">
+<a class="c-link" href="https://golifeward.com" id="i-rewalk-robotics" rel="noopener" target="_blank">
+<span class="c-nm">ReWalk Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="工业">
+<a class="c-link" href="https://www.suitx.com" id="i-suitx" rel="noopener" target="_blank">
+<span class="c-nm">SuitX</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="农业机器人">
+<a class="c-link" href="https://www.bluerivertechnology.com" id="i-blue-river-technology" rel="noopener" target="_blank">
+<span class="c-nm">Blue River Technology</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="开源·农业机器人">
+<a class="c-link" href="https://farm.bot" id="i-farmbot" rel="noopener" target="_blank">
+<span class="c-nm">FarmBot</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="农业机器人">
+<a class="c-link" href="https://carbonrobotics.com" id="i-carbon-robotics" rel="noopener" target="_blank">
+<span class="c-nm">Carbon Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="农业·农业机器人·国产">
+<a class="c-link" href="https://www.fjdynamics.cn/" id="i-丰疆智能" rel="noopener" target="_blank">
+<span class="c-nm">Farming Fortune</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="农业机器人">
+<a class="c-link" href="https://ironox.com" id="i-iron-ox" rel="noopener" target="_blank">
+<span class="c-nm">Iron Ox</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="服务机器人·无人机">
+<a class="c-link" href="https://www.oceaneering.com" id="i-oceaneering" rel="noopener" target="_blank">
+<span class="c-nm">Oceaneering</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="医疗">
+<a class="c-link" href="https://www.saabseaeye.com" id="i-saab-seaeye" rel="noopener" target="_blank">
+<span class="c-nm">Saab Seaeye</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="开源">
+<a class="c-link" href="https://bluerobotics.com" id="i-blue-robotics" rel="noopener" target="_blank">
+<span class="c-nm">Blue Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="国产·服务机器人">
+<a class="c-link" href="https://www.deepinfar.com" id="i-深之蓝" rel="noopener" target="_blank">
+<span class="c-nm">Deep Blue</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="评测·学术">
+<a class="c-link" href="https://www.robocup.org" id="i-robocup" rel="noopener" target="_blank">
+<span class="c-nm">RoboCup</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="教育">
+<a class="c-link" href="https://www.firstinspires.org" id="i-first-robotics" rel="noopener" target="_blank">
+<span class="c-nm">FIRST Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="评测">
+<a class="c-link" href="https://www.vexrobotics.com" id="i-vex-robotics" rel="noopener" target="_blank">
+<span class="c-nm">VEX Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="社区">
+<a class="c-link" href="https://makerfaire.com" id="i-maker-faire" rel="noopener" target="_blank">
+<span class="c-nm">Maker Faire</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="编程助手">
+<a class="c-link" href="https://education.lego.com" id="i-lego-education" rel="noopener" target="_blank">
+<span class="c-nm">LEGO Education</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="开源">
+<a class="c-link" href="https://www.arduino.cc" id="i-arduino" rel="noopener" target="_blank">
+<span class="c-nm">Arduino</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="芯片设计·边缘计算">
+<a class="c-link" href="https://www.raspberrypi.com" id="i-raspberry-pi" rel="noopener" target="_blank">
+<span class="c-nm">Raspberry Pi</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="编程助手">
+<a class="c-link" href="https://microbit.org" id="i-microbit" rel="noopener" target="_blank">
+<span class="c-nm">micro:bit</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="教育·国产">
+<a class="c-link" href="https://www.xtool.cn" id="i-makeblock" rel="noopener" target="_blank">
+<span class="c-nm">Makeblock</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="仿生·无人机">
+<a class="c-link" href="https://www.festo.com/bionic" id="i-festo-bionic" rel="noopener" target="_blank">
+<span class="c-nm">Festo Bionic</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="机械臂">
+<a class="c-link" href="https://www.softroboticsinc.com" id="i-soft-robotics" rel="noopener" target="_blank">
+<span class="c-nm">Soft Robotics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="物流">
+<a class="c-link" href="https://www.piaggiofastforward.com" id="i-piaggio-fast-forward" rel="noopener" target="_blank">
+<span class="c-nm">Piaggio Fast Forward</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="医疗">
+<a class="c-link" href="https://openbionics.com" id="i-open-bionics" rel="noopener" target="_blank">
+<span class="c-nm">Open Bionics</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="robot" data-tags="无人机">
+<a class="c-link" href="https://wyss.harvard.edu/technology/robobees" id="i-robobees" rel="noopener" target="_blank">
+<span class="c-nm">RoboBees</span>
+</a>
+</div>
+</div>
+</section>
+<section class="cat-group" data-cat="learn" id="cat-learn">
+<h2 class="cat-h"><span aria-hidden="true" class="cat-dot"></span>Learning</h2>
+<div class="grid">
+<div class="card-wrap" data-cat="learn" data-tags="学术">
+<a class="c-link" href="https://arxiv.org" id="i-arxiv" rel="noopener" target="_blank">
+<span class="c-nm">arXiv</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="学术·搜索">
+<a class="c-link" href="https://www.semanticscholar.org" id="i-semantic-scholar" rel="noopener" target="_blank">
+<span class="c-nm">Semantic Scholar</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="可视化">
+<a class="c-link" href="https://www.connectedpapers.com" id="i-connected-papers" rel="noopener" target="_blank">
+<span class="c-nm">Connected Papers</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="社交·学术">
+<a class="c-link" href="https://www.researchgate.net" id="i-researchgate" rel="noopener" target="_blank">
+<span class="c-nm">ResearchGate</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="课程·合规">
+<a class="c-link" href="https://www.coursera.org" id="i-coursera" rel="noopener" target="_blank">
+<span class="c-nm">Coursera</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="课程·学术">
+<a class="c-link" href="https://www.edx.org" id="i-edx" rel="noopener" target="_blank">
+<span class="c-nm">edX</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="课程">
+<a class="c-link" href="https://www.udacity.com" id="i-udacity" rel="noopener" target="_blank">
+<span class="c-nm">Udacity</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="免费">
+<a class="c-link" href="https://www.fast.ai" id="i-fastai" rel="noopener" target="_blank">
+<span class="c-nm">Fast.ai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="课程·教育">
+<a class="c-link" href="https://www.deeplearning.ai" id="i-deeplearningai" rel="noopener" target="_blank">
+<span class="c-nm">DeepLearning.AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="教育">
+<a class="c-link" href="https://leetcode.com" id="i-leetcode" rel="noopener" target="_blank">
+<span class="c-nm">LeetCode</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="课程">
+<a class="c-link" href="https://www.codecademy.com" id="i-codecademy" rel="noopener" target="_blank">
+<span class="c-nm">Codecademy</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="教育·合规">
+<a class="c-link" href="https://www.hackerrank.com" id="i-hackerrank" rel="noopener" target="_blank">
+<span class="c-nm">HackerRank</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="评测">
+<a class="c-link" href="https://www.codewars.com" id="i-codewars" rel="noopener" target="_blank">
+<span class="c-nm">Codewars</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="开源·教育">
+<a class="c-link" href="https://exercism.org" id="i-exercism" rel="noopener" target="_blank">
+<span class="c-nm">Exercism</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="免费·课程">
+<a class="c-link" href="https://ocw.mit.edu" id="i-mit-opencourseware" rel="noopener" target="_blank">
+<span class="c-nm">MIT OpenCourseWare</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="学术·教育">
+<a class="c-link" href="https://online.stanford.edu" id="i-stanford-online" rel="noopener" target="_blank">
+<span class="c-nm">Stanford Online</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="免费·课程">
+<a class="c-link" href="https://www.khanacademy.org" id="i-khan-academy" rel="noopener" target="_blank">
+<span class="c-nm">Khan Academy</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="课程·免费">
+<a class="c-link" href="https://openstax.org" id="i-openstax" rel="noopener" target="_blank">
+<span class="c-nm">OpenStax</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="科研·可视化">
+<a class="c-link" href="https://www.3blue1brown.com" id="i-3blue1brown" rel="noopener" target="_blank">
+<span class="c-nm">3Blue1Brown</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="免费">
+<a class="c-link" href="https://learnprompting.org" id="i-learn-prompting" rel="noopener" target="_blank">
+<span class="c-nm">Learn Prompting</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="学术">
+<a class="c-link" href="https://www.promptingguide.ai" id="i-prompting-guide" rel="noopener" target="_blank">
+<span class="c-nm">Prompting Guide</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="大厂·设计">
+<a class="c-link" href="https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices" id="i-anthropic-prompt-library" rel="noopener" target="_blank">
+<span class="c-nm">Anthropic Prompt Library</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="大厂·编程助手">
+<a class="c-link" href="https://cookbook.openai.com" id="i-openai-cookbook" rel="noopener" target="_blank">
+<span class="c-nm">OpenAI Cookbook</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="社区">
+<a class="c-link" href="https://flowgpt.com" id="i-flowgpt" rel="noopener" target="_blank">
+<span class="c-nm">FlowGPT</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="数据集">
+<a class="c-link" href="https://commoncrawl.org" id="i-common-crawl" rel="noopener" target="_blank">
+<span class="c-nm">Common Crawl</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="社区">
+<a class="c-link" href="https://huggingface.co/datasets" id="i-hugging-face-datasets" rel="noopener" target="_blank">
+<span class="c-nm">Hugging Face Datasets</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="大厂·搜索">
+<a class="c-link" href="https://datasetsearch.research.google.com" id="i-google-dataset-search" rel="noopener" target="_blank">
+<span class="c-nm">Google Dataset Search</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="评测">
+<a class="c-link" href="https://www.image-net.org" id="i-imagenet" rel="noopener" target="_blank">
+<span class="c-nm">ImageNet</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="开源">
+<a class="c-link" href="https://www.openstreetmap.org" id="i-openstreetmap" rel="noopener" target="_blank">
+<span class="c-nm">OpenStreetMap</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="安全">
+<a class="c-link" href="https://www.rust-lang.org" id="i-rust" rel="noopener" target="_blank">
+<span class="c-nm">Rust</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="数据集">
+<a class="c-link" href="https://www.python.org" id="i-python" rel="noopener" target="_blank">
+<span class="c-nm">Python</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="前端">
+<a class="c-link" href="https://www.typescriptlang.org" id="i-typescript" rel="noopener" target="_blank">
+<span class="c-nm">TypeScript</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="云服务">
+<a class="c-link" href="https://go.dev" id="i-go" rel="noopener" target="_blank">
+<span class="c-nm">Go</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="大厂·本地部署">
+<a class="c-link" href="https://www.swift.org" id="i-swift" rel="noopener" target="_blank">
+<span class="c-nm">Swift</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="课程·学术">
+<a class="c-link" href="https://www.deeplearningbook.org" id="i-deep-learning-book" rel="noopener" target="_blank">
+<span class="c-nm">Deep Learning Book</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="课程·编程助手">
+<a class="c-link" href="https://d2l.ai" id="i-d2lai" rel="noopener" target="_blank">
+<span class="c-nm">d2l.ai</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="科研">
+<a class="c-link" href="https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning" id="i-pattern-recognition-and-machine-learning" rel="noopener" target="_blank">
+<span class="c-nm">Pattern Recognition and Machine Learning</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="课程·学术">
+<a class="c-link" href="https://incompleteideas.net/book/the-book.html" id="i-reinforcement-learning-an-introduction" rel="noopener" target="_blank">
+<span class="c-nm">Reinforcement Learning: An Introduction</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="科研">
+<a class="c-link" href="https://hastie.su.domains/ElemStatLearn" id="i-the-elements-of-statistical-learning" rel="noopener" target="_blank">
+<span class="c-nm">The Elements of Statistical Learning</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="跨链">
+<a class="c-link" href="https://ziglang.org" id="i-zig" rel="noopener" target="_blank">
+<span class="c-nm">Zig</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="科研·高性能">
+<a class="c-link" href="https://julialang.org" id="i-julia" rel="noopener" target="_blank">
+<span class="c-nm">Julia</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="高性能">
+<a class="c-link" href="https://mojolang.org" id="i-mojo" rel="noopener" target="_blank">
+<span class="c-nm">Mojo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="学术·科研">
+<a class="c-link" href="https://elicit.com" id="i-elicit" rel="noopener" target="_blank">
+<span class="c-nm">Elicit</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="工作流·学术">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/compare-coding-agents.html" id="i-对比写代码-agent-怎么选" rel="noopener" target="_blank">
+<span class="c-nm">Compare: coding agents</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="工作流·学术">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/compare-chat-assistants.html" id="i-对比聊天助手怎么选" rel="noopener" target="_blank">
+<span class="c-nm">Compare: chat assistants</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="工作流·学术">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/compare-media-tools.html" id="i-对比图像与视频工具链怎么选" rel="noopener" target="_blank">
+<span class="c-nm">Compare: image &amp; video toolchains</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="工作流·学术">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/compare-local-runners.html" id="i-对比本地-runner-怎么选" rel="noopener" target="_blank">
+<span class="c-nm">Compare: local runners</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="工作流·学术">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/compare-agent-frameworks.html" id="i-对比agent-框架怎么选" rel="noopener" target="_blank">
+<span class="c-nm">Compare: agent frameworks</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="工作流·学术">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/compare-research-tools.html" id="i-对比研究工具怎么选" rel="noopener" target="_blank">
+<span class="c-nm">Compare: research tools</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="工作流·学术">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/compare-browser-agents.html" id="i-对比浏览器-agent-三选一" rel="noopener" target="_blank">
+<span class="c-nm">Compare: three browser agents</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="工作流·学术">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/exercise-builder.html" id="i-练习builder-带引用问答" rel="noopener" target="_blank">
+<span class="c-nm">Exercise: builder cited Q&amp;A</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="工作流·学术">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/exercise-creator.html" id="i-练习creator-三件套" rel="noopener" target="_blank">
+<span class="c-nm">Exercise: creator three-piece kit</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="工作流·学术">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/exercise-manager.html" id="i-练习manager-决策备忘录" rel="noopener" target="_blank">
+<span class="c-nm">Exercise: manager decision memo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="learn" data-tags="工作流·学术">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/selftest-20.html" id="i-自测20-题含答案" rel="noopener" target="_blank">
+<span class="c-nm">Self-test: 20 questions (with answers)</span>
+</a>
+</div>
+</div>
+</section>
+<section class="cat-group" data-cat="community" id="cat-community">
+<h2 class="cat-h"><span aria-hidden="true" class="cat-dot"></span>Community</h2>
+<div class="grid">
+<div class="card-wrap" data-cat="community" data-tags="创业">
+<a class="c-link" href="https://news.ycombinator.com" id="i-hacker-news" rel="noopener" target="_blank">
+<span class="c-nm">Hacker News</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="社区·创业">
+<a class="c-link" href="https://www.producthunt.com" id="i-product-hunt" rel="noopener" target="_blank">
+<span class="c-nm">Product Hunt</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="学术">
+<a class="c-link" href="https://www.reddit.com/r/MachineLearning" id="i-reddit-rmachinelearning" rel="noopener" target="_blank">
+<span class="c-nm">Reddit r/MachineLearning</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="资讯·社区">
+<a class="c-link" href="https://dev.to" id="i-devto" rel="noopener" target="_blank">
+<span class="c-nm">Dev.to</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="编程助手">
+<a class="c-link" href="https://stackoverflow.com" id="i-stack-overflow" rel="noopener" target="_blank">
+<span class="c-nm">Stack Overflow</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="资讯·学术">
+<a class="c-link" href="https://www.technologyreview.com" id="i-mit-technology-review" rel="noopener" target="_blank">
+<span class="c-nm">MIT Technology Review</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="资讯">
+<a class="c-link" href="https://www.theverge.com/ai-artificial-intelligence" id="i-the-verge-ai" rel="noopener" target="_blank">
+<span class="c-nm">The Verge AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="创业">
+<a class="c-link" href="https://venturebeat.com/category/ai" id="i-venturebeat-ai" rel="noopener" target="_blank">
+<span class="c-nm">VentureBeat AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="创业·企业级">
+<a class="c-link" href="https://techcrunch.com/category/artificial-intelligence" id="i-techcrunch-ai" rel="noopener" target="_blank">
+<span class="c-nm">TechCrunch AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="数据集">
+<a class="c-link" href="https://analyticsindiamag.com" id="i-analytics-india-magazine" rel="noopener" target="_blank">
+<span class="c-nm">Analytics India Magazine</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="大厂">
+<a class="c-link" href="https://deepmind.google" id="i-google-deepmind" rel="noopener" target="_blank">
+<span class="c-nm">Google DeepMind</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="学术·大厂">
+<a class="c-link" href="https://openai.com/research" id="i-openai-research" rel="noopener" target="_blank">
+<span class="c-nm">OpenAI Research</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="大厂">
+<a class="c-link" href="https://ai.meta.com/research" id="i-meta-ai-research" rel="noopener" target="_blank">
+<span class="c-nm">Meta AI Research</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="安全">
+<a class="c-link" href="https://www.anthropic.com/research" id="i-anthropic-research" rel="noopener" target="_blank">
+<span class="c-nm">Anthropic Research</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="GPU">
+<a class="c-link" href="https://research.nvidia.com" id="i-nvidia-research" rel="noopener" target="_blank">
+<span class="c-nm">NVIDIA Research</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="社区">
+<a class="c-link" href="https://discuss.huggingface.co" id="i-hugging-face-forums" rel="noopener" target="_blank">
+<span class="c-nm">Hugging Face Forums</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="安全">
+<a class="c-link" href="https://www.alignmentforum.org" id="i-ai-alignment-forum" rel="noopener" target="_blank">
+<span class="c-nm">AI Alignment Forum</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="开源">
+<a class="c-link" href="https://www.eleuther.ai" id="i-eleutherai-discord" rel="noopener" target="_blank">
+<span class="c-nm">EleutherAI Discord</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="学术·国产">
+<a class="c-link" href="https://hub.baai.ac.cn" id="i-智源社区" rel="noopener" target="_blank">
+<span class="c-nm">BAAI Community</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="大厂·社区">
+<a class="c-link" href="https://community.openai.com" id="i-openai-developer-forum" rel="noopener" target="_blank">
+<span class="c-nm">OpenAI Developer Forum</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="播客">
+<a class="c-link" href="https://lexfridman.com/podcast" id="i-lex-fridman-podcast" rel="noopener" target="_blank">
+<span class="c-nm">Lex Fridman Podcast</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="学术">
+<a class="c-link" href="https://www.youtube.com/@MachineLearningStreetTalk" id="i-machine-learning-street-talk" rel="noopener" target="_blank">
+<span class="c-nm">Machine Learning Street Talk</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="播客">
+<a class="c-link" href="https://practicalai.show" id="i-practical-ai" rel="noopener" target="_blank">
+<span class="c-nm">Practical AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="教育·数据集">
+<a class="c-link" href="https://dataskeptic.com" id="i-data-skeptic" rel="noopener" target="_blank">
+<span class="c-nm">Data Skeptic</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="community" data-tags="创业">
+<a class="c-link" href="https://www.youtube.com/@ThisWeekInStartups" id="i-this-week-in-startups" rel="noopener" target="_blank">
+<span class="c-nm">This Week in Startups</span>
+</a>
+</div>
+</div>
+</section>
+<section class="cat-group" data-cat="tools" id="cat-tools">
+<h2 class="cat-h"><span aria-hidden="true" class="cat-dot"></span>Tools &amp; utilities</h2>
+<div class="grid">
+<div class="card-wrap" data-cat="tools" data-tags="编程助手·协作">
+<a class="c-link" href="https://github.com" id="i-github" rel="noopener" target="_blank">
+<span class="c-nm">GitHub</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="云服务·前端">
+<a class="c-link" href="https://vercel.com" id="i-vercel" rel="noopener" target="_blank">
+<span class="c-nm">Vercel</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="云服务">
+<a class="c-link" href="https://www.netlify.com" id="i-netlify" rel="noopener" target="_blank">
+<span class="c-nm">Netlify</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="翻译">
+<a class="c-link" href="https://www.deepl.com" id="i-deepl" rel="noopener" target="_blank">
+<span class="c-nm">DeepL</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="设计·协作">
+<a class="c-link" href="https://www.figma.com" id="i-figma" rel="noopener" target="_blank">
+<span class="c-nm">Figma</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="前端·仿真">
+<a class="c-link" href="https://codepen.io" id="i-codepen" rel="noopener" target="_blank">
+<span class="c-nm">CodePen</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="数据集·评测">
+<a class="c-link" href="https://www.kaggle.com/" id="i-kaggle" rel="noopener" target="_blank">
+<span class="c-nm">Kaggle</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="IDE·前端">
+<a class="c-link" href="https://stackblitz.com" id="i-stackblitz" rel="noopener" target="_blank">
+<span class="c-nm">StackBlitz</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="设计·办公">
+<a class="c-link" href="https://excalidraw.com" id="i-excalidraw" rel="noopener" target="_blank">
+<span class="c-nm">Excalidraw</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="办公·可视化">
+<a class="c-link" href="https://obsidian.md" id="i-obsidian" rel="noopener" target="_blank">
+<span class="c-nm">Obsidian</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="办公">
+<a class="c-link" href="https://www.raycast.com" id="i-raycast" rel="noopener" target="_blank">
+<span class="c-nm">Raycast</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="命令行">
+<a class="c-link" href="https://www.warp.dev" id="i-warp" rel="noopener" target="_blank">
+<span class="c-nm">Warp</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="办公">
+<a class="c-link" href="https://linear.app" id="i-linear" rel="noopener" target="_blank">
+<span class="c-nm">Linear</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="API">
+<a class="c-link" href="https://www.postman.com" id="i-postman" rel="noopener" target="_blank">
+<span class="c-nm">Postman</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="云服务">
+<a class="c-link" href="https://www.docker.com" id="i-docker" rel="noopener" target="_blank">
+<span class="c-nm">Docker</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="云服务·开源">
+<a class="c-link" href="https://supabase.com" id="i-supabase" rel="noopener" target="_blank">
+<span class="c-nm">Supabase</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="协作·社区">
+<a class="c-link" href="https://glitch.com" id="i-glitch" rel="noopener" target="_blank">
+<span class="c-nm">Glitch</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="云服务·边缘计算">
+<a class="c-link" href="https://www.cloudflare.com" id="i-cloudflare" rel="noopener" target="_blank">
+<span class="c-nm">Cloudflare</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="云服务">
+<a class="c-link" href="https://aws.amazon.com" id="i-aws" rel="noopener" target="_blank">
+<span class="c-nm">AWS</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="大厂·实时">
+<a class="c-link" href="https://firebase.google.com" id="i-firebase" rel="noopener" target="_blank">
+<span class="c-nm">Firebase</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="云服务">
+<a class="c-link" href="https://planetscale.com" id="i-planetscale" rel="noopener" target="_blank">
+<span class="c-nm">PlanetScale</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="云服务">
+<a class="c-link" href="https://neon.com" id="i-neon" rel="noopener" target="_blank">
+<span class="c-nm">Neon</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="云服务">
+<a class="c-link" href="https://railway.com" id="i-railway" rel="noopener" target="_blank">
+<span class="c-nm">Railway</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="边缘计算·云服务">
+<a class="c-link" href="https://fly.io" id="i-flyio" rel="noopener" target="_blank">
+<span class="c-nm">Fly.io</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="云服务">
+<a class="c-link" href="https://render.com" id="i-render" rel="noopener" target="_blank">
+<span class="c-nm">Render</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="社区">
+<a class="c-link" href="https://dribbble.com" id="i-dribbble" rel="noopener" target="_blank">
+<span class="c-nm">Dribbble</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="大厂·设计">
+<a class="c-link" href="https://www.behance.net" id="i-behance" rel="noopener" target="_blank">
+<span class="c-nm">Behance</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="图像生成·免费">
+<a class="c-link" href="https://unsplash.com" id="i-unsplash" rel="noopener" target="_blank">
+<span class="c-nm">Unsplash</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="设计·音乐生成">
+<a class="c-link" href="https://www.pexels.com" id="i-pexels" rel="noopener" target="_blank">
+<span class="c-nm">Pexels</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="设计·前端">
+<a class="c-link" href="https://iconify.design" id="i-iconify" rel="noopener" target="_blank">
+<span class="c-nm">Iconify</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="视频生成·前端">
+<a class="c-link" href="https://lottiefiles.com" id="i-lottiefiles" rel="noopener" target="_blank">
+<span class="c-nm">LottieFiles</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="可观测">
+<a class="c-link" href="https://www.datadoghq.com" id="i-datadog" rel="noopener" target="_blank">
+<span class="c-nm">Datadog</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="可观测">
+<a class="c-link" href="https://sentry.io" id="i-sentry" rel="noopener" target="_blank">
+<span class="c-nm">Sentry</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="可视化">
+<a class="c-link" href="https://grafana.com" id="i-grafana" rel="noopener" target="_blank">
+<span class="c-nm">Grafana</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="可观测">
+<a class="c-link" href="https://newrelic.com" id="i-new-relic" rel="noopener" target="_blank">
+<span class="c-nm">New Relic</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="可观测·前端">
+<a class="c-link" href="https://logrocket.com" id="i-logrocket" rel="noopener" target="_blank">
+<span class="c-nm">LogRocket</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="前端">
+<a class="c-link" href="https://d3js.org" id="i-d3js" rel="noopener" target="_blank">
+<span class="c-nm">D3.js</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="IDE·协作">
+<a class="c-link" href="https://observablehq.com" id="i-observable" rel="noopener" target="_blank">
+<span class="c-nm">Observable</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="国产">
+<a class="c-link" href="https://echarts.apache.org" id="i-echarts" rel="noopener" target="_blank">
+<span class="c-nm">ECharts</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="科研·多语言">
+<a class="c-link" href="https://plotly.com" id="i-plotly" rel="noopener" target="_blank">
+<span class="c-nm">Plotly</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="前端">
+<a class="c-link" href="https://www.chartjs.org" id="i-chartjs" rel="noopener" target="_blank">
+<span class="c-nm">Chart.js</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="云服务">
+<a class="c-link" href="https://www.namecheap.com" id="i-namecheap" rel="noopener" target="_blank">
+<span class="c-nm">Namecheap</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="安全">
+<a class="c-link" href="https://www.cloudflare.com/products/registrar" id="i-cloudflare-domains" rel="noopener" target="_blank">
+<span class="c-nm">Cloudflare Domains</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="免费·前端">
+<a class="c-link" href="https://pages.github.com" id="i-github-pages" rel="noopener" target="_blank">
+<span class="c-nm">GitHub Pages</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="安全·工作流">
+<a class="c-link" href="https://vercel.com/docs/domains" id="i-vercel-domains" rel="noopener" target="_blank">
+<span class="c-nm">Vercel Domains</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="安全">
+<a class="c-link" href="https://porkbun.com" id="i-porkbun" rel="noopener" target="_blank">
+<span class="c-nm">Porkbun</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流">
+<a class="c-link" href="https://zapier.com" id="i-zapier" rel="noopener" target="_blank">
+<span class="c-nm">Zapier</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="可视化·工作流">
+<a class="c-link" href="https://www.make.com" id="i-make" rel="noopener" target="_blank">
+<span class="c-nm">Make</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="办公">
+<a class="c-link" href="https://airtable.com" id="i-airtable" rel="noopener" target="_blank">
+<span class="c-nm">Airtable</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="前端·可视化">
+<a class="c-link" href="https://bubble.io" id="i-bubble" rel="noopener" target="_blank">
+<span class="c-nm">Bubble</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="企业级">
+<a class="c-link" href="https://retool.com" id="i-retool" rel="noopener" target="_blank">
+<span class="c-nm">Retool</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="合规">
+<a class="c-link" href="https://www.certik.com" id="i-certik" rel="noopener" target="_blank">
+<span class="c-nm">CertiK</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="合规">
+<a class="c-link" href="https://www.openzeppelin.com" id="i-openzeppelin" rel="noopener" target="_blank">
+<span class="c-nm">OpenZeppelin</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="安全·学术">
+<a class="c-link" href="https://www.trailofbits.com" id="i-trail-of-bits" rel="noopener" target="_blank">
+<span class="c-nm">Trail of Bits</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="合规·Web3">
+<a class="c-link" href="https://quantstamp.com" id="i-quantstamp" rel="noopener" target="_blank">
+<span class="c-nm">Quantstamp</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="国产·安全">
+<a class="c-link" href="https://www.slowmist.com" id="i-慢雾科技-slowmist" rel="noopener" target="_blank">
+<span class="c-nm">SlowMist</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="IDE·开源">
+<a class="c-link" href="https://code.visualstudio.com" id="i-vs-code" rel="noopener" target="_blank">
+<span class="c-nm">VS Code</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="高性能">
+<a class="c-link" href="https://www.sublimetext.com" id="i-sublime-text" rel="noopener" target="_blank">
+<span class="c-nm">Sublime Text</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="命令行">
+<a class="c-link" href="https://iterm2.com" id="i-iterm2" rel="noopener" target="_blank">
+<span class="c-nm">iTerm2</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="GPU">
+<a class="c-link" href="https://alacritty.org" id="i-alacritty" rel="noopener" target="_blank">
+<span class="c-nm">Alacritty</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="API·本地部署">
+<a class="c-link" href="https://www.usebruno.com" id="i-bruno" rel="noopener" target="_blank">
+<span class="c-nm">Bruno</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="API·云服务">
+<a class="c-link" href="https://konghq.com" id="i-kong" rel="noopener" target="_blank">
+<span class="c-nm">Kong</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="大厂·企业级">
+<a class="c-link" href="https://cloud.google.com/apigee" id="i-apigee" rel="noopener" target="_blank">
+<span class="c-nm">Apigee</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="开源·高性能">
+<a class="c-link" href="https://tyk.io" id="i-tyk" rel="noopener" target="_blank">
+<span class="c-nm">Tyk</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="大厂·云服务">
+<a class="c-link" href="https://aws.amazon.com/api-gateway" id="i-aws-api-gateway" rel="noopener" target="_blank">
+<span class="c-nm">AWS API Gateway</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="合规">
+<a class="c-link" href="https://zuplo.com" id="i-zuplo" rel="noopener" target="_blank">
+<span class="c-nm">Zuplo</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流">
+<a class="c-link" href="https://www.alfredapp.com" id="i-alfred" rel="noopener" target="_blank">
+<span class="c-nm">Alfred</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="免费">
+<a class="c-link" href="https://rectangleapp.com" id="i-rectangle" rel="noopener" target="_blank">
+<span class="c-nm">Rectangle</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="免费">
+<a class="c-link" href="https://alt-tab.app" id="i-alttab" rel="noopener" target="_blank">
+<span class="c-nm">AltTab</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="安全">
+<a class="c-link" href="https://1password.com" id="i-1password" rel="noopener" target="_blank">
+<span class="c-nm">1Password</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="开源·本地部署">
+<a class="c-link" href="https://bitwarden.com" id="i-bitwarden" rel="noopener" target="_blank">
+<span class="c-nm">Bitwarden</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="办公">
+<a class="c-link" href="https://www.notion.so" id="i-notion" rel="noopener" target="_blank">
+<span class="c-nm">Notion</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流·开源">
+<a class="c-link" href="https://www.windmill.dev" id="i-windmill" rel="noopener" target="_blank">
+<span class="c-nm">Windmill</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="开源·基础设施">
+<a class="c-link" href="https://temporal.io" id="i-temporal" rel="noopener" target="_blank">
+<span class="c-nm">Temporal</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流·可视化">
+<a class="c-link" href="https://opal.google/" id="i-google-opal" rel="noopener" target="_blank">
+<span class="c-nm">Google Opal</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流·企业级">
+<a class="c-link" href="https://www.microsoft.com/en-us/microsoft-copilot/microsoft-copilot-studio" id="i-microsoft-copilot-studio" rel="noopener" target="_blank">
+<span class="c-nm">Microsoft Copilot Studio</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流·开源">
+<a class="c-link" href="https://n8n.io" id="i-n8n" rel="noopener" target="_blank">
+<span class="c-nm">n8n</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/toolkit-prompt-context.html" id="i-specul-提示词与上下文模板" rel="noopener" target="_blank">
+<span class="c-nm">Specul prompt &amp; context templates</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/toolkit-agent-ops.html" id="i-specul-agent-评估与护栏模板" rel="noopener" target="_blank">
+<span class="c-nm">Specul agent evaluation &amp; guardrail templates</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/toolkit-rights-cost.html" id="i-specul-权限与成本模板" rel="noopener" target="_blank">
+<span class="c-nm">Specul permission &amp; cost templates</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/playbook-fix-a-bug.html" id="i-playbook修一个真实-bug" rel="noopener" target="_blank">
+<span class="c-nm">Playbook: fix a real bug</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/playbook-60s-video.html" id="i-playbook做一条-60-秒视频" rel="noopener" target="_blank">
+<span class="c-nm">Playbook: make a 60-second video</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/playbook-research-brief.html" id="i-playbook做一份可核查的研究简报" rel="noopener" target="_blank">
+<span class="c-nm">Playbook: a verifiable research brief</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/playbook-service-agent.html" id="i-playbook搭一个客服-agent" rel="noopener" target="_blank">
+<span class="c-nm">Playbook: build a support agent</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/playbook-local-model.html" id="i-playbook在本机跑一个模型" rel="noopener" target="_blank">
+<span class="c-nm">Playbook: run a model locally</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="合规">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/cn-availability.html" id="i-指南国内可用性怎么读" rel="noopener" target="_blank">
+<span class="c-nm">Guide: reading mainland availability</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/changes-2026-q3-q4.html" id="i-速记2026-q3q4-变更" rel="noopener" target="_blank">
+<span class="c-nm">Brief: 2026 Q3–Q4 changes</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/playbook-team-90days.html" id="i-playbook团队-90-天落地" rel="noopener" target="_blank">
+<span class="c-nm">Playbook: 90-day team rollout</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="合规">
+<a class="c-link" href="https://tools.specul.com/en/mcp/guides/checklist-procurement-access.html" id="i-清单采购与权限审计" rel="noopener" target="_blank">
+<span class="c-nm">Checklist: procurement &amp; access audit</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="tools" data-tags="工作流 · 企业级">
+<a class="c-link" href="https://www.microsoft.com/en-us/power-platform/products/power-automate" id="i-power-automate" rel="noopener" target="_blank">
+<span class="c-nm">Power Automate</span>
+</a>
+</div>
+</div>
+</section>
+<section class="cat-group" data-cat="safety" id="cat-safety">
+<h2 class="cat-h"><span aria-hidden="true" class="cat-dot"></span>AI safety &amp; governance</h2>
+<div class="grid">
+<div class="card-wrap" data-cat="safety" data-tags="AI 安全">
+<a class="c-link" href="https://www.nist.gov/itl/ai-risk-management-framework" id="i-nist-ai-risk-management-framework" rel="noopener" target="_blank">
+<span class="c-nm">NIST AI Risk Management Framework</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 安全">
+<a class="c-link" href="https://genai.owasp.org/llm-top-10/" id="i-owasp-llm-top-10" rel="noopener" target="_blank">
+<span class="c-nm">OWASP LLM Top 10</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 安全">
+<a class="c-link" href="https://atlas.mitre.org/" id="i-mitre-atlas" rel="noopener" target="_blank">
+<span class="c-nm">MITRE ATLAS</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 安全">
+<a class="c-link" href="https://incidentdatabase.ai/" id="i-ai-incident-database" rel="noopener" target="_blank">
+<span class="c-nm">AI Incident Database</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 治理">
+<a class="c-link" href="https://partnershiponai.org/" id="i-partnership-on-ai" rel="noopener" target="_blank">
+<span class="c-nm">Partnership on AI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="合规·法律">
+<a class="c-link" href="https://artificialintelligenceact.eu/" id="i-eu-ai-act" rel="noopener" target="_blank">
+<span class="c-nm">EU AI Act</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 安全">
+<a class="c-link" href="https://www.aisi.gov.uk/" id="i-uk-ai-safety-institute" rel="noopener" target="_blank">
+<span class="c-nm">UK AI Safety Institute</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 安全">
+<a class="c-link" href="https://www.nist.gov/aisi" id="i-us-ai-safety-institute" rel="noopener" target="_blank">
+<span class="c-nm">US AI Safety Institute</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="评测·学术">
+<a class="c-link" href="https://metr.org/" id="i-metr" rel="noopener" target="_blank">
+<span class="c-nm">METR</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 安全">
+<a class="c-link" href="https://www.safe.ai/" id="i-center-for-ai-safety" rel="noopener" target="_blank">
+<span class="c-nm">Center for AI Safety</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 安全">
+<a class="c-link" href="https://www.anthropic.com/safety" id="i-anthropic-safety" rel="noopener" target="_blank">
+<span class="c-nm">Anthropic Safety</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 安全">
+<a class="c-link" href="https://openai.com/safety/" id="i-openai-safety" rel="noopener" target="_blank">
+<span class="c-nm">OpenAI Safety</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 安全">
+<a class="c-link" href="https://deepmind.google/safety/" id="i-google-deepmind-safety" rel="noopener" target="_blank">
+<span class="c-nm">Google DeepMind Safety</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="科研·开源">
+<a class="c-link" href="https://www.eleuther.ai/" id="i-eleutherai" rel="noopener" target="_blank">
+<span class="c-nm">EleutherAI</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 公平">
+<a class="c-link" href="https://aif360.res.ibm.com/" id="i-ai-fairness-360" rel="noopener" target="_blank">
+<span class="c-nm">AI Fairness 360</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 公平">
+<a class="c-link" href="https://fairlearn.org/" id="i-fairlearn" rel="noopener" target="_blank">
+<span class="c-nm">Fairlearn</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 安全">
+<a class="c-link" href="https://github.com/Trusted-AI/adversarial-robustness-toolbox" id="i-adversarial-robustness-toolbox" rel="noopener" target="_blank">
+<span class="c-nm">Adversarial Robustness Toolbox</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 安全">
+<a class="c-link" href="https://github.com/NVIDIA/garak" id="i-garak" rel="noopener" target="_blank">
+<span class="c-nm">Garak</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 治理">
+<a class="c-link" href="https://arxiv.org/abs/1810.03993" id="i-model-cards-for-model-reporting" rel="noopener" target="_blank">
+<span class="c-nm">Model Cards for Model Reporting</span>
+</a>
+</div>
+<div class="card-wrap" data-cat="safety" data-tags="AI 治理">
+<a class="c-link" href="https://arxiv.org/abs/1803.09010" id="i-datasheets-for-datasets" rel="noopener" target="_blank">
+<span class="c-nm">Datasheets for Datasets</span>
+</a>
+</div>
+</div>
+</section>
+</div>
+</section>
+</main>
+<footer class="site-footer foot-single">
+<div class="container foot-line">
+<div class="foot-brand">
+<span class="foot-brand-main">
+<span aria-hidden="true" class="brand-dot"></span>
+<span class="foot-copy">Specul · specul.com</span>
+</span>
+<span class="foot-license"><a href="https://specul.com/LICENSE-CONTENT.txt">Content CC BY 4.0</a><span aria-hidden="true" class="sep">·</span><a href="https://specul.com/LICENSE.txt">Code MIT</a><span aria-hidden="true" class="sep">·</span><a class="foot-source" href="https://github.com/speculcom/ai-sites-directory" rel="noopener" target="_blank">Source</a></span>
+</div>
+<nav aria-label="Footer site links" class="foot-sites">
+<a class="site-link" href="https://specul.com/en/">Home</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://learn.specul.com/en/">Learn</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://tools.specul.com/en/">Tools</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://models.specul.com/en/">Models</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://demos.specul.com/en/">Demos</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://oss.specul.com/en/">OSS</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://hardware.specul.com/en/">Compute</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://papers.specul.com/en/">Papers</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://chain.specul.com/en/">Chain</a><span aria-hidden="true" class="sep site-sep">·</span>
+<a class="site-link" href="https://nav.specul.com/en/">Directory</a>
+</nav>
+<nav aria-label="Legal and corrections" class="foot-legal">
+<a href="https://specul.com/en/legal.html">Legal</a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/en/legal.html#s8">Privacy</a><span aria-hidden="true" class="sep">·</span>
+<a href="https://specul.com/en/correct.html">Corrections</a>
+</nav>
+</div>
+</footer>
+<nav aria-label="快捷导航" class="nav-tabbar nav-tabbar-1row">
+<a href="https://specul.com/en/"><span aria-hidden="true" class="ti">◎</span>Home</a>
+<a href="https://learn.specul.com/en/"><span aria-hidden="true" class="ti">▤</span>Learn</a>
+<a href="https://tools.specul.com/en/"><span aria-hidden="true" class="ti">◈</span>Tools</a>
+<a href="https://models.specul.com/en/"><span aria-hidden="true" class="ti">▦</span>Models</a>
+<a href="https://demos.specul.com/en/"><span aria-hidden="true" class="ti">▷</span>Demos</a>
+<a href="https://oss.specul.com/en/"><span aria-hidden="true" class="ti">▧</span>OSS</a>
+<a href="https://hardware.specul.com/en/"><span aria-hidden="true" class="ti">▣</span>Chips</a>
+<a href="https://papers.specul.com/en/"><span aria-hidden="true" class="ti">▥</span>Papers</a>
+<a href="https://chain.specul.com/en/"><span aria-hidden="true" class="ti">◇</span>Chain</a>
+<a aria-current="page" data-nav-group="external" href="https://nav.specul.com/en/"><span aria-hidden="true" class="ti">↗</span>Nav</a>
+</nav>
+<script defer="" src="/directory.js"></script></body>
+</html>
